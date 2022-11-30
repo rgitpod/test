@@ -1,12 +1,13 @@
 import { StyleSheet, Text, View } from "react-native";
-import { list } from "./contents/data/List";
+import { index } from "./contents/data/index";
 
 export default function Note({ navigation, route }) {
   const name = route.params.name;
   const id = route.params.id;
+  console.log(route.params.name)
   return (
     <View>
-      <Text>{list[name][id].text}</Text>
+      <Text>{index[name][id].text}</Text>
     </View>
   );
 }

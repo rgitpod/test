@@ -1,9 +1,7 @@
 import Home from "./components/Home";
-import Morphemics from "./components/contents/Morphemics";
-import Phonetics from "./components/contents/Phonetics";
-import Orthography from "./components/contents/Orthography";
+import Content from "./components/Content";
 import AppHeader from "./components/AppHeader";
-import Note from "./components/Note";
+import Paragraph from "./components/Paragraph";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -18,10 +16,10 @@ export default function App() {
           component={Home}
           options={{ header: () => <AppHeader /> }}
         />
-        <Stack.Screen name="Morphemics" component={Morphemics} />
-        <Stack.Screen name="Phonetics" component={Phonetics} />
-        <Stack.Screen name="Orthography" component={Orthography} />
-        <Stack.Screen name="Note" component={Note} />
+        <Stack.Screen name="Morphemics" component={Content} />
+        <Stack.Screen name="Phonetics" component={Content} />
+        <Stack.Screen name="Spelling" component={Content} />
+        <Stack.Screen name="Paragraph" component={Paragraph} />
       </Stack.Navigator>
     </NavigationContainer>
   );
