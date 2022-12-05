@@ -16,7 +16,7 @@ export default function Phonetics({ navigation, route }) {
       {index[routeName].map((item, i) => (
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("Note", { name: routeName, id: i });
+            navigation.navigate("Paragraph", { name: routeName, id: i });
           }}
           key={i}
         >
