@@ -14,8 +14,6 @@ export default function Home({ navigation, route }) {
         title="Орфография"
         onPress={() => navigation.navigate("Spelling")}
       />
-      <Text>sdfs</Text>
-      <Text>sdfsdfs</Text>
     </>
   );
 }
