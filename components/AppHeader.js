@@ -1,18 +1,22 @@
-import { StyleSheet, Text, View, Button } from 'react-native'
+import { StyleSheet, Text, View, Button } from "react-native";
 
 export default function AppHeader() {
-    return (
-        <View style={styles.header}>
-            <Text>sdfd</Text>
-            <Button title={'sd'} />
-            <Button title={'sdf'} />
-        </View>
-    );
+  return (
+    <View style={styles.header}>
+      <Text style={styles.name}>Русский язык</Text>
+      <Button title={"mod"} />
+      <Button title={"bookmark"} />
+      <Button title={"search"} />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    header: {
-        flex: 1,
-        flexDirection: 'row',
-    }
-})
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+  },
+  name: {
+    fontSize: 16,
+  },
+});

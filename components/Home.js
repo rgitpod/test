@@ -6,11 +6,11 @@ export default function Home({ navigation, route }) {
   return (
     <>
       <MenuButton title="Фонетика" navTo="Phonetics" navigation={navigation} />
-      <Button
-        title="Морфология"
+      <MenuButton
+        title="Морфология" navTo=''
         onPress={() => navigation.navigate("Morphemics")}
       />
-      <Button
+      <MenuButton
         title="Орфография"
         onPress={() => navigation.navigate("Spelling")}
       />
