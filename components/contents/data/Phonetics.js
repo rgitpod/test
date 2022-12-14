@@ -1,6 +1,6 @@
 import { Zvuki } from "./Phonetics/Zvuki";
 
-export const phoneticsIndex = [
+export const Phonetics = [
   {
     title: "Звуки речи",
     text: Zvuki

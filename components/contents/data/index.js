@@ -1,4 +1,4 @@
-import { phoneticsIndex } from "./phoneticsIndex"
-import { spellingIndex } from './spellingIndex'
+import { Phonetics } from "./phoneticsIndex"
+import { Spelling } from './spellingIndex'
 
-export const index = {Phonetics: phoneticsIndex, Spelling: spellingIndex}
+export const index = {Phonetics: Phonetics, Spelling: Spelling}

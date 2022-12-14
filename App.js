@@ -18,6 +18,7 @@ export default function App() {
         />
         <Stack.Screen name="Morphemics" component={Content} />
         <Stack.Screen name="Phonetics" component={Content} />
+        <Stack.Screen name='Lexicology' component={Content}>
         <Stack.Screen name="Spelling" component={Content} />
         <Stack.Screen name="Paragraph" component={Paragraph} />
       </Stack.Navigator>

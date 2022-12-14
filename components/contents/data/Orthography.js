@@ -1,18 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Spell } from "./Spelling/Spell";
 
-export default function Spelling() {
-  return (
-    <View style={styles.container}>
-      <Text>Spelling</Text>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+export const Orthography = [
+  {
+    title: "Правописание",
+    text: Spell
   },
-});
+  {
+    id: "2",
+    title: "Правописание частиц",
+  },
+  {
+    id: "3",
+    title: "Гласные и согласные звуки",
+  },
+]
