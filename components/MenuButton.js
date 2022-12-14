@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 2,
     elevation: 3,
     backgroundColor: "white",
-    borderColor: "gray",
-    borderWidth: 2,
+    borderColor: "black",
+    borderWidth: 0.5,
   },
   title: {
     borderTopLeftRadius: 4,
@@ -43,6 +43,6 @@ const styles = StyleSheet.create({
     lineHeight: 21,
     fontWeight: "bold",
     letterSpacing: 0.25,
-    color: "gray",
+    color: "black",
   },
 });

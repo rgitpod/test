@@ -1,4 +1,4 @@
-import { Spell } from "./Spelling/Spell";
+import { Spell } from "./Spell";
 
 export const Orthography = [
   {
