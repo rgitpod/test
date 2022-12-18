@@ -1,18 +1,10 @@
-import {
-  FlatList,
-  StyleSheet,
-  Text,
-  View,
-  Pressable
-} from "react-native";
+import { FlatList, StyleSheet, Text, View, Pressable } from "react-native";
 import { index } from "./contents/data/index";
 
-const Separator = () => (
-  <View style={styles.separator} />
-);
+const Separator = () => <View style={styles.separator} />;
 
 export default function Phonetics({ navigation, route }) {
-  const routeName = route.name
+  const routeName = route.name;
 
   return (
     <View>
@@ -33,13 +25,13 @@ export default function Phonetics({ navigation, route }) {
 }
 
 const styles = StyleSheet.create({
-    btn: {
-      paddingVertical: 12,
-      paddingHorizontal: 30
-      },
-        separator: {
+  btn: {
+    paddingVertical: 12,
+    paddingHorizontal: 30,
+  },
+  separator: {
     marginVertical: 8,
-    borderBottomColor: '#737373',
+    borderBottomColor: "#737373",
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
-})
+});

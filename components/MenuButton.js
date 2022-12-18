@@ -1,42 +1,51 @@
 import { View, StyleSheet, Pressable, Text } from "react-native";
-
+import { Shadow } from "react-native-shadow-2";
 
 export default function MenuButton({ navigation, title, navTo }) {
   return (
-    <View style={{flexDirection: 'row'}}>
-      <Pressable style={[styles.button, styles.title]} onPress={() => navigation.navigate(navTo)}>
+    <Shadow
+      distance={4}
+      style={{
+        alignSelf: "stretch",
+        flexDirection: "row",
+        borderRadius: 7,
+      }}
+      containerStyle={{ margin: 10 }}
+      offset={[0, 1]}
+      corners={"topStart"}
+    >
+      <Pressable
+        style={[styles.button, styles.title]}
+        onPress={() => navigation.navigate(navTo)}
+      >
         <Text style={styles.text}>{title}</Text>
       </Pressable>
       <Pressable style={[styles.button, styles.quest]}>
         <Text style={styles.text}>?</Text>
       </Pressable>
-    </View>
+    </Shadow>
   );
 }
 
 const styles = StyleSheet.create({
   button: {
-    margin: 6,
     alignItems: "center",
     justifyContent: "center",
     paddingVertical: 12,
     paddingHorizontal: 2,
-    elevation: 3,
     backgroundColor: "white",
-    borderColor: "black",
-    borderWidth: 0.5,
   },
   title: {
-    borderTopLeftRadius: 4,
-    borderBottomLeftRadius: 4,
+    borderTopLeftRadius: 6,
+    borderBottomLeftRadius: 6,
     flexGrow: 1,
-    marginRight: -1
   },
   quest: {
-    borderTopRightRadius: 4,
-    borderBottomRightRadius: 4,
-    width: 50,
-    marginLeft: 0
+    borderTopRightRadius: 6,
+    borderBottomRightRadius: 6,
+    width: 40,
+    borderLeftWidth: 0.2,
+    borderLeftColor: 'gray'
   },
   text: {
     fontSize: 16,

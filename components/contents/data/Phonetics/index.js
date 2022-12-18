@@ -1,16 +1,23 @@
-import { Zvuki } from "./Zvuki";
+import { zvuki_rechi } from "./zvuki_rechi";
+import { foneticheskaya_transkripciya } from './foneticheskaya_transkripciya'
+import { glasnye_i_soglasnye_zvuki } from './glasnye_i_soglasnye_zvuki'
+import { grafika_bukvy_alfavit } from './grafika_bukvy_alfavit'
 
 export const Phonetics = [
   {
     title: "Звуки речи",
-    text: Zvuki
+    text: zvuki_rechi
   },
   {
-    id: "2",
     title: "Фонетическая транскрипция",
+    text: foneticheskaya_transkripciya
   },
   {
-    id: "3",
     title: "Гласные и согласные звуки",
+    text: glasnye_i_soglasnye_zvuki
   },
+  {
+    title: 'Графика. Буквы. Алфавит',
+    text: grafika_bukvy_alfavit
+  }
 ]
