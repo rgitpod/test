@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, Text, View, Pressable } from "react-native";
+import { StyleSheet, Text, View, Pressable } from "react-native";
 import { index } from "./contents/data/index";
 
 const Separator = () => <View style={styles.separator} />;

@@ -1,8 +1,6 @@
-import { StyleSheet, Text, View } from "react-native";
+import { View, ScrollView } from "react-native";
 import MenuButton from "./MenuButton";
 import AppFooter from './AppFooter'
-import { ScrollView } from "react-native-web";
-import { Col, Row, Grid } from "react-native-easy-grid";
 
 export default function Home({ navigation, route }) {
   return (
@@ -43,14 +41,6 @@ export default function Home({ navigation, route }) {
         onPress={() => navigation.navigate(navigation)}
       />
     </ScrollView>
-        <Grid>
-    <Col>
-        <Text>Fixed width</Text>
-    </Col>
-    <Col>
-        <Text>Fluid width</Text>
-    </Col>
-</Grid>
     <AppFooter />
     </View>
   );

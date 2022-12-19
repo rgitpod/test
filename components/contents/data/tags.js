@@ -39,4 +39,5 @@ const Li = ({ children }) => {
 const Div = ({ children, className }) => {
   return <View>{children}</View>;
 };
+
 export { P, Strong, Em, Span, Li, Div };

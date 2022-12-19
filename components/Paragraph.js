@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet } from "react-native";
+import { ScrollView } from "react-native";
 import { index } from "./contents/data/index";
 
 export default function Paragraph({ navigation, route }) {
