@@ -1,11 +1,13 @@
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, View, Button } from "react-native";
+import SvgButton from './SvgButton'
 
 export default function AppFooter() {
   return (
     <View style={styles.footer}>
-      <Button title={"mod"} />
-      <Button title={"bookmark"} />
-      <Button title={"search"} />
+      <SvgButton size={26} name='exit' />
+      <SvgButton size={26} name='mod' />
+      <SvgButton size={26} name='bookmark' />
+      <SvgButton size={26} name='search' />
     </View>
   );
 }

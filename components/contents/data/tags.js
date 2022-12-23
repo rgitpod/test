@@ -37,7 +37,7 @@ const Li = ({ children }) => {
 };
 
 const Div = ({ children, className }) => {
-  return <View>{children}</View>;
+  return <View><Text style={styles[className]}>{children}</Text></View>;
 };
 
 export { P, Strong, Em, Span, Li, Div };

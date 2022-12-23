@@ -25,5 +25,17 @@ export const styles = StyleSheet.create({
   },
   litera0: {
     color: 'red'
+  },
+  litera: {
+    color: 'red'
+  },
+  alertText: {
+    fontWeight: 'bold',
+    fontSize: 20
+  },
+  alert: {
+    backgroundColor: 'gray',
+    borderTopWidth: 1,
+    borderBottomWidth: 1
   }
 });

@@ -8,10 +8,9 @@ const Row = ({ children }) => {
   return <View style={styles.row}>{children}</View>;
 };
 
-const Col = ({ children, style }) => {
-    console.log(style)
+const Col = ({ children }) => {
   return (
-    <View style={[styles.col, style]}>
+    <View style={styles.col}>
       <Text>{children}</Text>
     </View>
   );
