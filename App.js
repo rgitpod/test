@@ -1,6 +1,5 @@
 import Home from "./components/Home";
 import Content from "./components/Content";
-import AppHeader from "./components/AppHeader";
 import Paragraph from "./components/Paragraph";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -14,11 +13,15 @@ export default function App() {
         <Stack.Screen
           name="Home"
           component={Home}
-          options={{ header: () => <AppHeader /> }}
+          options={{headerShown: false}}
         />
         <Stack.Screen name="Morphemics" component={Content} />
         <Stack.Screen name="Phonetics" component={Content} />
-        <Stack.Screen name="Spelling" component={Content} />
+        <Stack.Screen name="Lexicology" component={Content} />
+        <Stack.Screen name="Orthography" component={Content} />
+        <Stack.Screen name="Morphology" component={Content} />
+        <Stack.Screen name="Syntax" component={Content} />
+        <Stack.Screen name="Culture" component={Content} />
         <Stack.Screen name="Paragraph" component={Paragraph} />
       </Stack.Navigator>
     </NavigationContainer>

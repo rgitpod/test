@@ -1,28 +1,37 @@
-import {
-  FlatList,
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, Text, View, Pressable } from "react-native";
 import { index } from "./contents/data/index";
 
+const Separator = () => <View style={styles.separator} />;
 
 export default function Phonetics({ navigation, route }) {
-  const routeName = route.name
+  const routeName = route.name;
 
   return (
     <View>
       {index[routeName].map((item, i) => (
-        <TouchableOpacity
+        <Pressable
           onPress={() => {
-            navigation.navigate("Note", { name: routeName, id: i });
+            navigation.navigate("Paragraph", { name: routeName, id: i });
           }}
           key={i}
+          style={styles.btn}
         >
           <Text>{item.title}</Text>
-        </TouchableOpacity>
+          <Separator />
+        </Pressable>
       ))}
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  btn: {
+    paddingVertical: 12,
+    paddingHorizontal: 30,
+  },
+  separator: {
+    marginVertical: 8,
+    borderBottomColor: "#737373",
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+});
