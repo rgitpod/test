@@ -33,11 +33,15 @@ const Span = ({ children, className }) => {
 };
 
 const Li = ({ children }) => {
-  return <TagContext.Provider value="&#8208; ">{children}</TagContext.Provider>;
+  return <TagContext.Provider value="&#8208; "><Text>{children}</Text></TagContext.Provider>;
 };
 
 const Div = ({ children, className }) => {
   return <View><Text style={styles[className]}>{children}</Text></View>;
 };
 
-export { P, Strong, Em, Span, Li, Div };
+const Sup = ({ children }) => {
+  return <View><Text style={{position: 'relative', top: -3, fontSize: 18}}>{children}</Text></View>
+}
+
+export { P, Strong, Em, Span, Li, Div, Sup };

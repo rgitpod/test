@@ -41,7 +41,6 @@ export default function Home({ navigation, route }) {
         onPress={() => navigation.navigate(navigation)}
       />
     </ScrollView>
-    <AppFooter />
     </View>
   );
 }

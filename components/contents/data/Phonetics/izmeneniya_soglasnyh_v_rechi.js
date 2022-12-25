@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import { Strong, Span, P, Em, Li, Div } from "../tags";
+import { Strong, Span, P, Em, Li, Div, Sup } from "../tags";
 import { Table, Col, Row } from "../table";
 
 export const izmeneniya_soglasnyh_v_rechi = <View><P>Звуки употребляются не изолированно. В связной речи они оказываются рядом, &laquo;соседствуют&raquo;, что приводит к
@@ -87,7 +87,7 @@ export const izmeneniya_soglasnyh_v_rechi = <View><P>Звуки употребл
     <P><Strong>2)</Strong> <Span className="litera0">[з], [с], [н]</Span> перед <Span className="litera0">[б&rsquo;],
             [п&rsquo;], [в&rsquo;], [ф&rsquo;]</Span>, например: <Em><Span className="litera">зв</Span>ерь</Em> [<Span
             className="litera0">з&rsquo;в&rsquo;</Span>э&#769;р&rsquo;], <Em>в и<Span className="litera">зб</Span>е</Em>
-        [в<suP>&cap;</suP>ы<Span className="litera0">з&rsquo;б&rsquo;</Span>э&#769;], <Em><Span
+        [в<Sup>&cap;</Sup>ы<Span className="litera0">з&rsquo;б&rsquo;</Span>э&#769;], <Em><Span
                 className="litera">св</Span>ет</Em> [<Span className="litera0">с&rsquo;в&rsquo;</Span>э&#769;т] (хотя иногда
         такие сочетания могут произноситься и с твёрдым согласным);</P>
     <Strong>3)</Strong> все согласные, кроме <Span className="litera0">[ж], [ш]</Span>, перед разделительным <Span
@@ -108,7 +108,7 @@ export const izmeneniya_soglasnyh_v_rechi = <View><P>Звуки употребл
     <P>Ср.: <Em>поз<Span className="litera">д</Span>ний</Em> [по&#769;зн&rsquo;иj] &ndash; <Em>опоз<Span
                 className="litera">д</Span>ать</Em> [&Lambda;п&Lambda;з<Span className="litera0">д</Span>а&#769;т&rsquo;],
         <Em>сер<Span className="litera">д</Span>це</Em> [с&rsquo;е&#769;рцъ] &ndash; <Em>сер<Span
-                className="litera">д</Span>ечко</Em> [с&rsquo;и<suP>э</suP>р<Span
+                className="litera">д</Span>ечко</Em> [с&rsquo;и<Sup>э</Sup>р<Span
             className="litera0">д</Span>е&#769;ч&rsquo;къ], <Em>пропаган&shy;ди<Span className="litera">стск</Span>ий</Em>
         [пръпъг&Lambda;н&rsquo;д&rsquo;и&#769;<Span className="litera0">ск&rsquo;</Span>иj] &ndash; <Em>пропаганди<Span
                 className="litera">ст</Span></Em> [пръпъг&Lambda;н&rsquo;д&rsquo;и&#769;<Span className="litera0">ст</Span>].
@@ -182,5 +182,5 @@ export const izmeneniya_soglasnyh_v_rechi = <View><P>Звуки употребл
         className="litera0">[в]</Span>.</P>
 <Div className="primer">
     <P><Em>Большо<Span className="litera">г</Span>о</Em> [б&Lambda;л&rsquo;шо&#769;<Span className="litera0">в</Span>ъ],
-        <Em>мое<Span className="litera">г</Span>о</Em> [м&Lambda;jи<suP>э</suP><Span className="litera0">в</Span>о&#769;].</P>
+        <Em>мое<Span className="litera">г</Span>о</Em> [м&Lambda;jи<Sup>э</Sup><Span className="litera0">в</Span>о&#769;].</P>
 </Div></View>

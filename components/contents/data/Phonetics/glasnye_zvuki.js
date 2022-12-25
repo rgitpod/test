@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import { Strong, Span, P, Em, Li, Div } from "../tags";
+import { Strong, Span, P, Em, Li, Div, Sup } from "../tags";
 import { Table, Col, Row } from "../table";
 
 export const glasnye_zvuki = <View><P>Как отмечалось (см. п. 1.5. Звуки речи и буквы), в русском языке <Strong>6 основных</Strong> (то есть тех, что
@@ -149,14 +149,14 @@ export const glasnye_zvuki = <View><P>Как отмечалось (см. п. 1.5
         <P>В предударном слоге <Strong>после мягких согласных</Strong> на месте гласных <Span className="litera0">[а], [о],
                 [э]</Span> звучит звук, близкий к <Span className="litera0">[и]</Span>. В школьном варианте транскрипции его
             принято обозначать как <Span className="litera0">[и]</Span>, хотя этот звук звучит скорее как <Span
-                className="litera0">[и]</Span> с призвуком <Span className="litera0">[э] &ndash; [и<suP>э</suP>]</Span>.</P>
+                className="litera0">[и]</Span> с призвуком <Span className="litera0">[э] &ndash; [и<Sup>э</Sup>]</Span>.</P>
         <Div className="primer">
             <P>Ср.: <Em>вз<Span className="litera">я</Span>л</Em> [вз&rsquo;а&#769;л] &ndash; <Em>вз<Span
-                        className="litera">я</Span>ла</Em> [вз&rsquo;и<suP>э</suP>ла&#769;] или [вз&rsquo;ила&#769;],
+                        className="litera">я</Span>ла</Em> [вз&rsquo;и<Sup>э</Sup>ла&#769;] или [вз&rsquo;ила&#769;],
                 <Em>н<Span className="litera">ё</Span>с</Em> [н&rsquo;о&#769;с] &ndash; <Em>н<Span
-                        className="litera">е</Span>сла</Em> [н&rsquo;и<suP>э</suP>сла&#769;] или [н&rsquo;исла&#769;],
+                        className="litera">е</Span>сла</Em> [н&rsquo;и<Sup>э</Sup>сла&#769;] или [н&rsquo;исла&#769;],
                 <Em>б<Span className="litera">е</Span>л</Em> [б&rsquo;е&#769;л] &ndash; <Em>б<Span
-                        className="litera">е</Span>ла</Em> [б&rsquo;и<suP>э</suP>ла&#769;] или [б&rsquo;ила&#769;].
+                        className="litera">е</Span>ла</Em> [б&rsquo;и<Sup>э</Sup>ла&#769;] или [б&rsquo;ила&#769;].
             </P>
         </Div>
     </Li>
@@ -174,7 +174,7 @@ export const glasnye_zvuki = <View><P>Как отмечалось (см. п. 1.5
         <Col><Strong>Итак, в I слабой позиции на месте <Span className="litera0">[а], [о], [э]</Span> после твёрдых
                 согласных звучит звук, близкий к <Span className="litera0">[а]</Span> &ndash; <Span
                     className="litera0">[&Lambda;]</Span>, после мягких согласных &ndash; звук, близкий к <Span
-                    className="litera0">[и]</Span> &ndash; <Span className="litera0">[и<suP>э</suP>]</Span>.</Strong></Col>
+                    className="litera0">[и]</Span> &ndash; <Span className="litera0">[и<Sup>э</Sup>]</Span>.</Strong></Col>
     </Row>
 </Table>
 <P><Strong><Span className="number">5.</Span> Исключение</Strong> могут составлять некоторые слова с гласными <Span
@@ -184,20 +184,20 @@ export const glasnye_zvuki = <View><P>Как отмечалось (см. п. 1.5
     <Li>
         <P>после твёрдых <Span className="litera0">[ж], [ш], [ц]</Span> перед мягким согласным на месте <Span
                 className="litera0">[а]</Span> обычно звучит звук, средний между <Span className="litera0">[ы] и [э]</Span>
-            (обозначается <Span className="litera0">[ы<suP>э</suP>]</Span>);</P>
+            (обозначается <Span className="litera0">[ы<Sup>э</Sup>]</Span>);</P>
         <Div className="primer">
             <P><Em>Ж<Span className="litera">а</Span>леть</Em> [ж<Span
-                    className="litera0">ы<suP>э</suP></Span>л&rsquo;э&#769;т&rsquo;], <Em>лош<Span
-                        className="litera">а</Span>дей</Em> [лъш<Span className="litera0">ы<suP>э</suP></Span>д&rsquo;э&#769;j],
+                    className="litera0">ы<Sup>э</Sup></Span>л&rsquo;э&#769;т&rsquo;], <Em>лош<Span
+                        className="litera">а</Span>дей</Em> [лъш<Span className="litera0">ы<Sup>э</Sup></Span>д&rsquo;э&#769;j],
                 <Em>двадц<Span className="litera">а</Span>ти</Em> [двъц<Span
-                    className="litera0">ы<suP>э</suP></Span>т&rsquo;и&#769;].
+                    className="litera0">ы<Sup>э</Sup></Span>т&rsquo;и&#769;].
             </P>
         </Div>
     </Li>
     <Li>
         <P>на месте буквы <Span className="litera">е</Span> после <Span className="litera0">[ж], [ш], [ц]</Span> звучит звук,
             средний между <Span className="litera0">[ы]</Span> и <Span className="litera0">[э]</Span>, &ndash; <Span
-                className="litera0">[ы<suP>э</suP>]</Span>;</P>
+                className="litera0">[ы<Sup>э</Sup>]</Span>;</P>
         <Div className="primer">
             <P><Em>Жена</Em> [жыэна&#769;], <Em>шестой</Em> [шыэсто&#769;j], <Em>цена</Em> [цыэна&#769;].</P>
         </Div>
@@ -283,13 +283,13 @@ export const glasnye_zvuki = <View><P>Как отмечалось (см. п. 1.5
         <Col><Strong>Над безударными гласными поставьте номер слабой позиции:</Strong>
             <P>первый предударный слог &ndash; I слабая позиция; остальные безударные слоги &ndash; II слабая
                 позиция.</P>
-            <P><Em>Со</Em><suP>II</suP>-<Em>жа</Em><suP>I</suP>-<Em>л</Em><Span
-                    className="uDouble">е&#769;</Span>-<Em>ни</Em><suP>II</suP>-<Em>е</Em><suP>II</suP>.</P>
+            <P><Em>Со</Em><Sup>II</Sup>-<Em>жа</Em><Sup>I</Sup>-<Em>л</Em><Span
+                    className="uDouble">е&#769;</Span>-<Em>ни</Em><Sup>II</Sup>-<Em>е</Em><Sup>II</Sup>.</P>
             <P>Если среди этих гласных есть звуки <Span className="litera0">[и], [ы], [у]</Span> (буквы <Span
                     className="litera">и, ы, у, ю</Span>), то подчеркните их одной чертой: они не изменяют своего
                 звучания в безударном положении.</P>
-            <Em>Со</Em><suP>II</suP>-<Em>жа</Em><suP>I</suP>-<Em>л</Em><Span
-                className="uDouble">е&#769;</Span>-<Em>н<Span>и</Span></Em><suP>II</suP>-<Em>е</Em><suP>II</suP> &ndash; в
+            <Em>Со</Em><Sup>II</Sup>-<Em>жа</Em><Sup>I</Sup>-<Em>л</Em><Span
+                className="uDouble">е&#769;</Span>-<Em>н<Span>и</Span></Em><Sup>II</Sup>-<Em>е</Em><Sup>II</Sup> &ndash; в
             заударном слоге <Em>ни</Em> звучит гласный [и].
         </Col>
     </Row>
@@ -302,23 +302,23 @@ export const glasnye_zvuki = <View><P>Как отмечалось (см. п. 1.5
                     <P>после твёрдых согласных &ndash; <Span className="litera0">[&Lambda;]</Span>;</P>
                 </Li>
                 <Li>
-                    <P>после мягких согласных &ndash; <Span className="litera0">[и<suP>э</suP>]</Span>;</P>
+                    <P>после мягких согласных &ndash; <Span className="litera0">[и<Sup>э</Sup>]</Span>;</P>
                 </Li>
                 <Li>
                     <P>после <Span className="litera">ж, ш, ц</Span> может звучать <Span
-                            className="litera0">[ы<suP>э</suP>]</Span>.</P>
+                            className="litera0">[ы<Sup>э</Sup>]</Span>.</P>
                 </Li>
             </View>
-            <P><Em>Со</Em><suP>II</suP>-<Em>жа</Em><suP>I</suP>-<Em>л</Em><Span
-                    className="uDouble">е&#769;</Span>-<Em>н<Span>и</Span></Em><suP>II</suP>-<Em>е</Em><suP>II</suP>
-                &ndash; в слоге <Em>жа</Em> звучит гласный [ы<suP>э</suP>].</P>
+            <P><Em>Со</Em><Sup>II</Sup>-<Em>жа</Em><Sup>I</Sup>-<Em>л</Em><Span
+                    className="uDouble">е&#769;</Span>-<Em>н<Span>и</Span></Em><Sup>II</Sup>-<Em>е</Em><Sup>II</Sup>
+                &ndash; в слоге <Em>жа</Em> звучит гласный [ы<Sup>э</Sup>].</P>
             <P>Учтите, что если буквы <Span className="litera">е, я</Span> обозначают два звука: согласный <Span
                     className="litera0">[ j ]</Span> + гласный <Span className="litera0">[э], [а]</Span>, то эти гласные
                 также изменяются по общим правилам: <Span className="litera">j</Span> &ndash; мягкий согласный, значит,
                 после него на месте букв <Span className="litera">е, я</Span> будет звучать звук <Span
-                    className="litera0">[и<suP>э</suP>]</Span>.</P>
-            <P><Em>Объявился &ndash; о</Em><suP>II</suP>-<Em>бъя</Em><suP>I</suP>-<Em>ви&#769;л-ся</Em><suP>II</suP>
-                &ndash; первый предударный слог <Em>бъя</Em><suP>I</suP> будет звучать как [б&rsquo;jи<suP>э</suP>].
+                    className="litera0">[и<Sup>э</Sup>]</Span>.</P>
+            <P><Em>Объявился &ndash; о</Em><Sup>II</Sup>-<Em>бъя</Em><Sup>I</Sup>-<Em>ви&#769;л-ся</Em><Sup>II</Sup>
+                &ndash; первый предударный слог <Em>бъя</Em><Sup>I</Sup> будет звучать как [б&rsquo;jи<Sup>э</Sup>].
             </P>
         </Col>
     </Row>
@@ -343,10 +343,10 @@ export const glasnye_zvuki = <View><P>Как отмечалось (см. п. 1.5
                 также изменяются по общим правилам: <Span className="litera">j</Span> &ndash; мягкий согласный, значит,
                 после него на месте букв <Span className="litera">е, я</Span> будет звучать звук <Span
                     className="litera0">[ь]</Span>.</P>
-            <Em>Со</Em><suP>II</suP>-<Em>жа</Em><suP>I</suP>-<Em>л</Em><Span
-                className="uDouble">е&#769;</Span>-<Em>н<Span>и</Span></Em><suP>II</suP>-<Em>е</Em><suP>II</suP> &ndash;
+            <Em>Со</Em><Sup>II</Sup>-<Em>жа</Em><Sup>I</Sup>-<Em>л</Em><Span
+                className="uDouble">е&#769;</Span>-<Em>н<Span>и</Span></Em><Sup>II</Sup>-<Em>е</Em><Sup>II</Sup> &ndash;
             слог <Em>со</Em> с твёрдым согласным звучит как [съ]; слог <Em>е</Em> ([j] + гласный) звучит как [ь];
-            о<suP>II</suP>-<Em>бъя</Em><suP>I</suP>-<Em>ви&#769;л-ся</Em><suP>II</suP> &ndash; <Em>о</Em> в
+            о<Sup>II</Sup>-<Em>бъя</Em><Sup>I</Sup>-<Em>ви&#769;л-ся</Em><Sup>II</Sup> &ndash; <Em>о</Em> в
             абсолютном начале слова будет звучать как [&Lambda;], слог <Em>ся</Em> с мягким согласным будет звучать
             как [с&rsquo;ь].
         </Col>

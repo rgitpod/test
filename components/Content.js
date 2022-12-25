@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Pressable } from "react-native";
+import { StyleSheet, Text, ScrollView, View,Pressable } from "react-native";
 import { index } from "./contents/data/index";
 
 const Separator = () => <View style={styles.separator} />;
@@ -7,7 +7,7 @@ export default function Phonetics({ navigation, route }) {
   const routeName = route.name;
 
   return (
-    <View>
+    <ScrollView>
       {index[routeName].map((item, i) => (
         <Pressable
           onPress={() => {
@@ -20,7 +20,7 @@ export default function Phonetics({ navigation, route }) {
           <Separator />
         </Pressable>
       ))}
-    </View>
+    </ScrollView>
   );
 }
 

@@ -3,18 +3,22 @@ import Content from "./components/Content";
 import Paragraph from "./components/Paragraph";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import AppFooter from "./components/AppFooter";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{headerShown: false}}
-        />
+      <Stack.Navigator
+        screenOptions={{
+          header: (props) => {
+            console.log()
+            return <AppFooter {...props} />;
+          }
+        }}
+      >
+        <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Morphemics" component={Content} />
         <Stack.Screen name="Phonetics" component={Content} />
         <Stack.Screen name="Lexicology" component={Content} />
