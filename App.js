@@ -1,19 +1,19 @@
 import Home from "./components/Home";
 import Content from "./components/Content";
 import Paragraph from "./components/Paragraph";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, DarkTheme } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AppFooter from "./components/AppFooter";
+import { Theme } from './components/Theme';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={Theme.dark}>
       <Stack.Navigator
         screenOptions={{
           header: (props) => {
-            console.log()
             return <AppFooter {...props} />;
           }
         }}

@@ -1,7 +1,9 @@
 import { View, StyleSheet, Pressable, Text } from "react-native";
 import { Shadow } from "react-native-shadow-2";
+import { useTheme } from '@react-navigation/native'
 
 export default function MenuButton({ navigation, title, navTo }) {
+  const { colors } = useTheme()
   return (
     <Shadow
       distance={4}
@@ -15,12 +17,12 @@ export default function MenuButton({ navigation, title, navTo }) {
       corners={"topStart"}
     >
       <Pressable
-        style={[styles.button, styles.title]}
+        style={[styles.button, styles.title, {backgroundColor: colors.card}]}
         onPress={() => navigation.navigate(navTo)}
       >
-        <Text style={styles.text}>{title}</Text>
+        <Text style={[styles.text, {color: colors.text}]}>{title}</Text>
       </Pressable>
-      <Pressable style={[styles.button, styles.quest]}>
+      <Pressable style={[styles.button, styles.quest, {backgroundColor: colors.card}]}>
         <Text style={styles.text}>?</Text>
       </Pressable>
     </Shadow>
@@ -52,6 +54,5 @@ const styles = StyleSheet.create({
     lineHeight: 21,
     fontWeight: "bold",
     letterSpacing: 0.25,
-    color: "black",
   },
 });
