@@ -18,7 +18,7 @@ export default function Phonetics({ navigation, route }) {
           key={i}
           style={styles.btn}
         >
-          <Text style={{color: colors.text}}>{item.title}</Text>
+          <Text style={{color: colors.text, fontFamily: 'Rubik-Regular'}}>{item.title}</Text>
           <Separator />
         </Pressable>
       ))}
