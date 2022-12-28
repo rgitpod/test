@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import { Strong, Span, P, Em, Li, Div } from "../tags";
+import { Strong, Span, P, Em, Li, Div, Sup } from "../tags";
 import { Table, Col, Row } from "../table";
 
 export const pravopisanie_glasnyh = (
@@ -19,9 +19,9 @@ export const pravopisanie_glasnyh = (
         <Em>
           в л<Span className="litera">е</Span>су
         </Em>
-        [в<suP>&cap;</suP>л&rsquo;
+        [в<Sup>&cap;</Sup>л&rsquo;
         <Span className="litera0">
-          и<suP>э</suP>
+          и<Sup>э</Sup>
         </Span>
         су&#769;].
       </P>

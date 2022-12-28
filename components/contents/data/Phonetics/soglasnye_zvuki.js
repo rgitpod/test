@@ -8,7 +8,7 @@ export const soglasnye_zvuki = <View><P>В русском языке, как о�
 <P>Многие согласные образуют <Strong>пары</Strong> звонких и глухих согласных звуков:</P>
     <Table>
         <Row>
-            <th><Strong>Звонкие</Strong></th>
+            <Col><Strong>Звонкие</Strong></Col>
             <Col>[б]</Col>
             <Col>[б']</Col>
             <Col>[в]</Col>
@@ -22,7 +22,7 @@ export const soglasnye_zvuki = <View><P>В русском языке, как о�
             <Col>[ж]</Col>
         </Row>
         <Row>
-            <th><Strong>Глухие</Strong></th>
+            <Col><Strong>Глухие</Strong></Col>
             <Col>[п]</Col>
             <Col>[п']</Col>
             <Col>[ф]</Col>
@@ -40,7 +40,7 @@ export const soglasnye_zvuki = <View><P>В русском языке, как о�
 <P><Strong>Не образуют пар</Strong> следующие звонкие и глухие согласные звуки:</P>
     <Table>
         <Row>
-            <th><Strong>Звонкие</Strong></th>
+            <Col><Strong>Звонкие</Strong></Col>
             <Col>[л]</Col>
             <Col>[л']</Col>
             <Col>[м]</Col>
@@ -52,7 +52,7 @@ export const soglasnye_zvuki = <View><P>В русском языке, как о�
             <Col>[j]</Col>
         </Row>
         <Row>
-            <th><Strong>Глухие</Strong></th>
+            <Col><Strong>Глухие</Strong></Col>
             <Col>[х]</Col>
             <Col>[х']</Col>
             <Col>[ц]</Col>
@@ -67,7 +67,7 @@ export const soglasnye_zvuki = <View><P>В русском языке, как о�
 <P>Большинство согласных образует <Strong>пары</Strong> твёрдых и мягких согласных:</P>
     <Table>
         <Row>
-            <th><Strong>Твёрдые</Strong></th>
+            <Col><Strong>Твёрдые</Strong></Col>
             <Col>[б]</Col>
             <Col>[в]</Col>
             <Col>[г]</Col>
@@ -85,7 +85,7 @@ export const soglasnye_zvuki = <View><P>В русском языке, как о�
             <Col>[х]</Col>
         </Row>
         <Row>
-            <th><Strong>Мягкие</Strong></th>
+            <Col><Strong>Мягкие</Strong></Col>
             <Col>[б']</Col>
             <Col>[в']</Col>
             <Col>[г']</Col>
@@ -106,13 +106,13 @@ export const soglasnye_zvuki = <View><P>В русском языке, как о�
 <P><Strong>Не образуют пар</Strong> следующие твёрдые и мягкие согласные звуки:</P>
     <Table>
         <Row>
-            <th><Strong>Твёрдые</Strong></th>
+            <Col><Strong>Твёрдые</Strong></Col>
             <Col>[ж]</Col>
             <Col>[ш]</Col>
             <Col>[ц]</Col>
         </Row>
         <Row>
-            <th><Strong>Мягкие</Strong></th>
+            <Col><Strong>Мягкие</Strong></Col>
             <Col>[ч']</Col>
             <Col>[щ']</Col>
             <Col>[ j' ]</Col>

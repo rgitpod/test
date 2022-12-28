@@ -22,6 +22,7 @@ export const styles = StyleSheet.create({
   p: {
     margin: 4,
     fontSize: 19,
+    fontFamily: 'Rubik-Regular'
   },
   litera0: {
     color: 'red'

@@ -1,13 +1,15 @@
-import { StyleSheet, Text, View, Pressable } from "react-native";
+import { StyleSheet, Text, ScrollView, View,Pressable } from "react-native";
 import { index } from "./contents/data/index";
+import { useTheme } from '@react-navigation/native'
 
 const Separator = () => <View style={styles.separator} />;
 
 export default function Phonetics({ navigation, route }) {
+  const { colors } = useTheme()
   const routeName = route.name;
 
   return (
-    <View>
+    <ScrollView>
       {index[routeName].map((item, i) => (
         <Pressable
           onPress={() => {
@@ -16,11 +18,11 @@ export default function Phonetics({ navigation, route }) {
           key={i}
           style={styles.btn}
         >
-          <Text>{item.title}</Text>
+          <Text style={{color: colors.text, fontFamily: 'Rubik-Regular'}}>{item.title}</Text>
           <Separator />
         </Pressable>
       ))}
-    </View>
+    </ScrollView>
   );
 }
 

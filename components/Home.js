@@ -1,8 +1,8 @@
-import { View, ScrollView } from "react-native";
+import { View, ScrollView, Text } from "react-native";
 import MenuButton from "./MenuButton";
 import AppFooter from './AppFooter'
 
-export default function Home({ navigation, route }) {
+export default function Home({ navigation, route }) {  
   return (
     <View style={{flex: 1, justifyContent: 'space-between'}}>
     <ScrollView>
@@ -41,7 +41,6 @@ export default function Home({ navigation, route }) {
         onPress={() => navigation.navigate(navigation)}
       />
     </ScrollView>
-    <AppFooter />
     </View>
   );
 }
