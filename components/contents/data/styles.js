@@ -2,14 +2,14 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   strong: {
-    fontWeight: '500',
+    fontFamily: 'Rubik-SemiBold'
   },
   italic: {
     fontStyle: 'italic'
   },
   number: {
     overflow: 'hidden',
-    backgroundColor: 'gray',
+    backgroundColor: '#C1C2C5',
     borderRadius: 9,
     fontSize: 19,
     paddingRight: 4,
@@ -23,6 +23,10 @@ export const styles = StyleSheet.create({
     margin: 4,
     fontSize: 19,
     fontFamily: 'Rubik-Regular'
+  },
+  li: {
+    paddingLeft: 10,
+    marginTop: -6
   },
   litera0: {
     color: 'red'

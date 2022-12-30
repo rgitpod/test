@@ -1,6 +1,7 @@
 import { StyleSheet, Text, ScrollView, View,Pressable } from "react-native";
 import { index } from "./contents/data/index";
 import { useTheme } from '@react-navigation/native'
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Separator = () => <View style={styles.separator} />;
 
@@ -9,6 +10,7 @@ export default function Phonetics({ navigation, route }) {
   const routeName = route.name;
 
   return (
+    <SafeAreaView style={{flex: 1}}>
     <ScrollView>
       {index[routeName].map((item, i) => (
         <Pressable
@@ -23,6 +25,7 @@ export default function Phonetics({ navigation, route }) {
         </Pressable>
       ))}
     </ScrollView>
+    </SafeAreaView>
   );
 }
 

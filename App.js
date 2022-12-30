@@ -8,6 +8,7 @@ import AppFooter from "./components/AppFooter";
 import { Theme } from './components/Theme';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createNativeStackNavigator();
@@ -16,6 +17,9 @@ export default function App() {
     const [theme, setTheme] = useState(Theme.light)
       const [fontsLoaded] = useFonts({
     'Rubik-Regular': require('./assets/fonts/Rubik-Regular.ttf'),
+    'Rubik-Bold': require('./assets/fonts/Rubik-Bold.ttf'),
+        'Rubik-SemiBold': require('./assets/fonts/Rubik-SemiBold.ttf'),
+        'Rubik-Medium': require('./assets/fonts/Rubik-Medium.ttf'),
   });
 
   const onLayoutRootView = useCallback(async () => {
@@ -33,6 +37,7 @@ export default function App() {
   }
   
   return (
+    <SafeAreaProvider>
     <NavigationContainer theme={theme}>
       <Stack.Navigator
         screenOptions={{
@@ -52,5 +57,6 @@ export default function App() {
         <Stack.Screen name="Paragraph" component={Paragraph} />
       </Stack.Navigator>
     </NavigationContainer>
+    </SafeAreaProvider>
   );
 }

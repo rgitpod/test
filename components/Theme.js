@@ -18,6 +18,7 @@ const Theme = StyleSheet.create({
     text: '#f1f1f1',
     border: '#e6edee',
     notification: '#e6edee',
+    number: '#101113'
   }}
 })
 
