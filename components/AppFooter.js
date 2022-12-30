@@ -1,6 +1,7 @@
 import { StyleSheet, View, Dimensions } from "react-native";
 import SvgButton from "./SvgButton";
 import { useTheme } from '@react-navigation/native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import { Theme } from './Theme'
 
 export default function AppFooter({ navigation, onPress }) {

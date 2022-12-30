@@ -1,10 +1,11 @@
 import { View, ScrollView, Text } from "react-native";
 import MenuButton from "./MenuButton";
-import AppFooter from './AppFooter'
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 
 export default function Home({ navigation, route }) {  
   return (
-    <View style={{flex: 1, justifyContent: 'space-between'}}>
+    <SafeAreaView style={{flex: 1, justifyContent: 'space-between'}}>
     <ScrollView>
       <MenuButton
         title="Фонетика. Графика"
@@ -41,6 +42,6 @@ export default function Home({ navigation, route }) {
         onPress={() => navigation.navigate(navigation)}
       />
     </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }

@@ -50,10 +50,8 @@ const styles = StyleSheet.create({
     borderLeftColor: 'gray'
   },
   text: {
-    fontSize: 16,
+    fontSize: 18,
     lineHeight: 21,
-    fontWeight: "bold",
-    letterSpacing: 0.25,
-    fontFamily: 'Rubik-Regular'
+    fontFamily: 'Rubik-SemiBold'
   },
 });
