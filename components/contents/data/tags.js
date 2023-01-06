@@ -8,14 +8,8 @@ const TagContext = createContext();
 const P = ({ children }) => {
   const tag = useContext(TagContext);
   const { colors } = useTheme();
-  return (
-    <Text style={[styles.p, { color: colors.text }]}>
-      {tag}
-      {children}
-    </Text>
-  );
+  return <Text style={[styles.p, { color: colors.text }]}>{children}</Text>;
 };
-
 
 const Strong = ({ children }) => {
   const { colors } = useTheme();
@@ -24,7 +18,6 @@ const Strong = ({ children }) => {
   );
 };
 
-
 const Em = ({ children }) => {
   const { colors } = useTheme();
   return (
@@ -32,32 +25,36 @@ const Em = ({ children }) => {
   );
 };
 
-
 const Span = ({ children, className }) => {
   const { colors } = useTheme();
 
   if (className === "number") {
-    return <View><Text
-      style={[
-        styles.number,
-        { color: colors.text, backgroundColor: colors.number },
-      ]}
+    return (
+      <View>
+        <Text
+          style={[
+            styles.number,
+            { color: colors.text, backgroundColor: colors.number },
+          ]}
+        >
+          {children}
+        </Text>
+      </View>
+    );
+  }
+
+  return (
+    <Text
+      style={{
+        color: colors.text,
+        textShadowColor: colors.litera0,
+        ...styles[className],
+      }}
     >
       {children}
-    </Text></View>;
-  }
-  
-  console.log(colors[className])
-  return  (<Text
-           style={[                   
-                 { color: colors.text, textShadowColor: colors.litera0 },
-                 styles[className]
-                 ]}
-             >
-           {children}
-          </Text>);
+    </Text>
+  );
 };
-
 
 const Li = ({ children }) => {
   return (
@@ -67,14 +64,12 @@ const Li = ({ children }) => {
   );
 };
 
-
 const Div = ({ children, className }) => {
   const { colors } = useTheme();
   return (
-    <Text style={[styles[className], { color: colors.text }]}>{children}</Text>
+    <View><Text style={[styles[className], { color: colors.text }]}>{children}</Text></View>
   );
 };
-
 
 const Sup = ({ children }) => {
   const { colors } = useTheme();

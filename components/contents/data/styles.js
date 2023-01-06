@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     marginRight: 5,
   },
   p: {
-    margin: 5,
+    margin: 4,
     fontSize: 14,
     lineHeight: 17,
     fontFamily: 'Rubik-Regular'
@@ -28,17 +28,17 @@ export const styles = StyleSheet.create({
     lineHeight: 17
   },
   litera0: {
-    textShadowRadius: 2
+    textShadowRadius: 1.4
   },
   litera: {
-    color: 'red'
+    textShadowRadius: 1.4
   },
   alertText: {
-    fontWeight: 'bold',
-    fontSize: 20
+    fontFamily: 'Rubik-SemiBoldItalic',
+    fontSize: 13
   },
   alert: {
-    backgroundColor: 'gray',
+    backgroundColor: '#d2d2d4',
     borderTopWidth: 1,
     borderBottomWidth: 1
   },

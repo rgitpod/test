@@ -5,8 +5,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Home({ navigation, route }) {  
   return (
-    <SafeAreaView style={{flex: 1, justifyContent: 'space-between'}}>
-    <ScrollView>
+    <SafeAreaView style={{flex: 1, justifyContent: 'center'}}>
+    <View>
       <MenuButton
         title="Фонетика. Графика"
         navTo="Phonetics"
@@ -41,7 +41,7 @@ export default function Home({ navigation, route }) {
         navTo="Culture"
         onPress={() => navigation.navigate(navigation)}
       />
-    </ScrollView>
+    </View>
     </SafeAreaView>
   );
 }
