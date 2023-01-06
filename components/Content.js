@@ -11,7 +11,7 @@ export default function Phonetics({ navigation, route }) {
 
   return (
     <SafeAreaView style={{flex: 1}}>
-    <ScrollView>
+    <ScrollView style={{marginBottom: 35}}>
       {index[routeName].map((item, i) => (
         <Pressable
           onPress={() => {

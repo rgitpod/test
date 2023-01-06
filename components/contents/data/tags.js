@@ -8,14 +8,7 @@ const TagContext = createContext();
 const P = ({ children }) => {
   const tag = useContext(TagContext);
   const { colors } = useTheme();
-  return (
-    <View>
-      <Text style={[styles.p, { color: colors.text }]}>
-        {tag}
-        {children}
-      </Text>
-    </View>
-  );
+  return <Text style={[styles.p, { color: colors.text }]}>{children}</Text>;
 };
 
 const Strong = ({ children }) => {
@@ -34,24 +27,39 @@ const Em = ({ children }) => {
 
 const Span = ({ children, className }) => {
   const { colors } = useTheme();
+
+  if (className === "number") {
+    return (
+      <View>
+        <Text
+          style={[
+            styles.number,
+            { color: colors.text, backgroundColor: colors.number },
+          ]}
+        >
+          {children}
+        </Text>
+      </View>
+    );
+  }
+
   return (
-    <View>
-      <Text
-        style={[
-          styles[className],
-          { color: colors.text, backgroundColor: colors.number },
-        ]}
-      >
-        {children}
-      </Text>
-    </View>
+    <Text
+      style={{
+        color: colors.text,
+        textShadowColor: colors.litera0,
+        ...styles[className],
+      }}
+    >
+      {children}
+    </Text>
   );
 };
 
 const Li = ({ children }) => {
   return (
     <TagContext.Provider value="&#x2023; ">
-      <View style={styles.li}><Text>{children}</Text></View>
+      <Text style={styles.li}>{children}</Text>
     </TagContext.Provider>
   );
 };
@@ -59,11 +67,7 @@ const Li = ({ children }) => {
 const Div = ({ children, className }) => {
   const { colors } = useTheme();
   return (
-    <View>
-      <Text style={[styles[className], { color: colors.text }]}>
-        {children}
-      </Text>
-    </View>
+    <View><Text style={[styles[className], { color: colors.text }]}>{children}</Text></View>
   );
 };
 
