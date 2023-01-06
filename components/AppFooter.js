@@ -20,14 +20,14 @@ const styles = StyleSheet.create({
   footer: {
     flexDirection: "row",
     justifyContent: "space-around",
-    paddingTop: 10,
+    paddingTop: 15,
     paddingBottom: 3,
     borderTopLeftRadius: 14,
     borderTopRightRadius: 14,
     position: "absolute",
     width: "100%",
-    height: 50,
-    top: Dimensions.get("window").height - 50,
+    height: 60,
+    top: Dimensions.get("window").height - 60,
   },
   name: {
     fontSize: 16,
