@@ -19,23 +19,28 @@ export const styles = StyleSheet.create({
   },
   p: {
     margin: 4,
-    fontSize: 14,
-    lineHeight: 17,
+    marginTop: 6,
+    fontSize: 17,
+    lineHeight: 21,
     fontFamily: 'Rubik-Regular'
   },
   li: {
-    paddingLeft: 10,
-    lineHeight: 17
+    paddingLeft: 15,
+    lineHeight: 19
   },
   litera0: {
-    textShadowRadius: 1.4
+    color: 'black',
+    fontSize: 19,
+    textShadowRadius: 1.8
   },
   litera: {
-    textShadowRadius: 1.4
+    color: 'black',
+    fontSize: 19,
+    textShadowRadius: 1.8
   },
   alertText: {
     fontFamily: 'Rubik-SemiBoldItalic',
-    fontSize: 13
+    fontSize: 14
   },
   alert: {
     backgroundColor: '#d2d2d4',
@@ -43,7 +48,7 @@ export const styles = StyleSheet.create({
     borderBottomWidth: 1
   },
   primer: {
-    paddingLeft: 10,
+    paddingLeft: 15,
     lineHeight: 17
   }
 });
