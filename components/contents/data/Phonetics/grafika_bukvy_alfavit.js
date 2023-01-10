@@ -26,10 +26,10 @@ export const grafika_bukvy_alfavit = (
     </P>
     <Table>
       <Row>
-        <Col>Буквы</Col>
-        <Col>Название букв</Col>
-        <Col>Буквы</Col>
-        <Col style={{width: 110}}>Название букв</Col>
+        <Col pr='colHed'>Буквы</Col>
+        <Col pr='colHed'>Название букв</Col>
+        <Col pr='colHed'>Буквы</Col>
+        <Col pr='colHed'>Название букв</Col>
       </Row>
       <Row>
         <Col>

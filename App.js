@@ -9,6 +9,7 @@ import { Theme } from "./components/Theme";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import Test from './components/Test'
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createNativeStackNavigator();
@@ -55,6 +56,7 @@ export default function App() {
           <Stack.Screen name="Morphology" component={Content} />
           <Stack.Screen name="Syntax" component={Content} />
           <Stack.Screen name="Culture" component={Content} />
+          <Stack.Screen name="Test" component={Test} />
           <Stack.Screen name="Paragraph" component={Paragraph} options={{headerShown: false}} />
         </Stack.Navigator>
       </NavigationContainer>

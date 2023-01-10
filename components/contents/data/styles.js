@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 export const styles = StyleSheet.create({
   strong: {
@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
   number: {
     overflow: 'hidden',
     borderRadius: 9,
-    fontSize: 16,
+    fontSize: 20,
     paddingRight: 4,
     paddingLeft: 5,
     marginTop: -3,
@@ -20,13 +20,14 @@ export const styles = StyleSheet.create({
   p: {
     margin: 4,
     marginTop: 6,
-    fontSize: 17,
-    lineHeight: 21,
-    fontFamily: 'Rubik-Regular'
+    fontSize: 18,
+    fontFamily: 'Rubik-Regular',
+     width: '100%'
   },
   li: {
-    paddingLeft: 15,
-    lineHeight: 19
+    paddingLeft: 16,
+    fontSize: 18,
+    fontFamily: 'Rubik-Regular'
   },
   litera0: {
     color: 'black',
@@ -45,10 +46,18 @@ export const styles = StyleSheet.create({
   alert: {
     backgroundColor: '#d2d2d4',
     borderTopWidth: 1,
-    borderBottomWidth: 1
+    borderBottomWidth: 1,
+    fontSize: 18,
+    fontFamily: 'Rubik-Regular',
+  backgroundColor: 'blue',
   },
   primer: {
-    paddingLeft: 15,
-    lineHeight: 17
+    paddingLeft: 16,
+    fontSize: 18,
+    fontFamily: 'Rubik-Regular',
+     backgroundColor: 'green',//Colors.transparentColor,
+  fontSize: 18,
+  color: 'white',
+  width: Dimensions.get('window').width
   }
 });

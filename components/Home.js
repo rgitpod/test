@@ -41,6 +41,11 @@ export default function Home({ navigation, route }) {
         navTo="Culture"
         onPress={() => navigation.navigate(navigation)}
       />
+      <MenuButton
+        title="Test"
+        navTo="Test"
+        navigation={navigation}
+      />
     </View>
     </SafeAreaView>
   );
