@@ -96,9 +96,9 @@ const Sup = ({ children }) => {
 };
 
 
-const wdt = Dimensions.get('window').width
+
 const T = ({ children }) => { 
-  return <View style={{paddingLeft: 10, width: wd}}><Text>{children}</Text></View>
+  return <View><Text style={styles.t}>{children}</Text></View>
 }
 
 

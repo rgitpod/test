@@ -5,11 +5,15 @@ import Paragraph from "./components/Paragraph";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AppFooter from "./components/AppFooter";
+import AppHeader from "./components/AppHeader";
+import Search from "./components/Search";
+import Bookmark from "./components/Bookmark";
+import FontSize from "./components/FontSize";
 import { Theme } from "./components/Theme";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import Test from './components/Test'
+import Test from "./components/Test";
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createNativeStackNavigator();
@@ -41,23 +45,36 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <NavigationContainer theme={theme}>
-        <Stack.Navigator
-          screenOptions={{
-            header: (props) => {
-              return <AppFooter {...props} onPress={changeTheme} />;
-            },
-          }}
-        >
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Morphemics" component={Content} />
-          <Stack.Screen name="Phonetics" component={Content} />
-          <Stack.Screen name="Lexicology" component={Content} />
-          <Stack.Screen name="Orthography" component={Content} />
-          <Stack.Screen name="Morphology" component={Content} />
-          <Stack.Screen name="Syntax" component={Content} />
-          <Stack.Screen name="Culture" component={Content} />
-          <Stack.Screen name="Test" component={Test} />
-          <Stack.Screen name="Paragraph" component={Paragraph} options={{headerShown: false}} />
+        <Stack.Navigator>
+          <Stack.Group
+            screenOptions={{
+              header: (props) => {
+                return <AppFooter {...props} onPress={changeTheme} />;
+              },
+            }}
+          >
+            <Stack.Screen name="Home">
+              {(props) => <Home {...props} onPress={changeTheme} />}
+            </Stack.Screen>
+            <Stack.Screen name="Morphemics" component={Content} />
+            <Stack.Screen name="Phonetics" component={Content} />
+            <Stack.Screen name="Lexicology" component={Content} />
+            <Stack.Screen name="Orthography" component={Content} />
+            <Stack.Screen name="Morphology" component={Content} />
+            <Stack.Screen name="Syntax" component={Content} />
+            <Stack.Screen name="Culture" component={Content} />
+            <Stack.Screen name="Test" component={Test} />
+            <Stack.Screen
+              name="Paragraph"
+              component={Paragraph}
+              options={{ headerShown: false }}
+            />
+          </Stack.Group>
+          <Stack.Group screenOptions={{ presentation: "modal" }}>
+            <Stack.Screen name="Search" component={Search} />
+            <Stack.Screen name="Bookmark" component={Bookmark} />
+            <Stack.Screen name="FontSize" component={FontSize} />
+          </Stack.Group>
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

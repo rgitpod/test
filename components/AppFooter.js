@@ -9,9 +9,8 @@ export default function AppFooter({ navigation, onPress }) {
   return (
     <View style={[styles.footer, {backgroundColor: colors.card}]}>
       <SvgButton size={26} name="exit" onPress={() => navigation.goBack()}/>
-      <SvgButton size={26} name="mod" onPress={onPress}/>
-      <SvgButton size={26} name="bookmark" />
-      <SvgButton size={26} name="search" />
+      <SvgButton size={26} name="search" onPress={() => navigation.navigate('Search')}/>
+      <SvgButton size={26} name="bookmark" onPress={() => navigation.navigate('Bookmark')}/>
     </View>
   );
 }

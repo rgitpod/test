@@ -11,7 +11,7 @@ const Row = ({ children }) => {
 const Col = ({ children, pr }) => {
   return (
     <View style={[styles.col, styles[pr]]}>
-      <Text style={styles['text' + pr]}>{children}</Text>
+      <Text style={[styles["text" + pr], styles.text]}>{children}</Text>
     </View>
   );
 };
@@ -24,19 +24,20 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#d6d6d6",
   },
-  colText: {
-    
+  text: {
+    fontFamily: "Rubik-Regular",
+    fontSize: 18,
   },
   colHed: {
     borderRightWidth: 1,
     borderBottomWidth: 1,
     padding: 5,
     flex: 1,
-    backgroundColor: "#bdbdbd"
+    backgroundColor: "#bdbdbd",
   },
   textcolHed: {
     fontSize: 15,
-    fontFamily: 'Rubik-SemiBold'
+    fontFamily: "Rubik-SemiBold",
   },
   row: {
     flexDirection: "row",

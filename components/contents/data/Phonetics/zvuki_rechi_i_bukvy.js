@@ -1,9 +1,9 @@
-import { View, Dimensions } from "react-native";
-import { Strong, Span, P, Em, Li, Div } from "../tags";
+import { View } from "react-native";
+import { Strong, Span, P, Em, Li, Div, T } from "../tags";
 import { Table, Col, Row } from "../table";
 
 export const zvuki_rechi_i_bukvy = (
-  <View style={{flex: 1}}>
+  <View>
     <P>
       <Strong>
         <Span className="number">1.</Span>
@@ -231,22 +231,22 @@ export const zvuki_rechi_i_bukvy = (
       предшествующая согласная буква обозначает мягкий согласный звук:
     </Li>
     <Div className="primer">
-        <Em>
-          С<Span className="litera">я</Span>ду
-        </Em>{" "}
-        [<Span className="litera0">с&rsquo;</Span>а&#769;ду],{" "}
-        <Em>
-          с<Span className="litera">е</Span>л
-        </Em>{" "}
-        [<Span className="litera0">с&rsquo;</Span>э&#769;л],{" "}
-        <Em>
-          с<Span className="litera">ё</Span>л
-        </Em>{" "}
-        [<Span className="litera0">с&rsquo;</Span>о&#769;л],{" "}
-        <Em>
-          с<Span className="litera">ю</Span>да
-        </Em>{" "}
-        [<Span className="litera0">с&rsquo;</Span>уда&#769;];
+      <Em>
+        С<Span className="litera">я</Span>ду
+      </Em>{" "}
+      [<Span className="litera0">с&rsquo;</Span>а&#769;ду],{" "}
+      <Em>
+        с<Span className="litera">е</Span>л
+      </Em>{" "}
+      [<Span className="litera0">с&rsquo;</Span>э&#769;л],{" "}
+      <Em>
+        с<Span className="litera">ё</Span>л
+      </Em>{" "}
+      [<Span className="litera0">с&rsquo;</Span>о&#769;л],{" "}
+      <Em>
+        с<Span className="litera">ю</Span>да
+      </Em>{" "}
+      [<Span className="litera0">с&rsquo;</Span>уда&#769;];
     </Div>
     <Li>
       <Strong>после гласных букв</Strong>, в начале слова и после разделительных{" "}
@@ -255,12 +255,10 @@ export const zvuki_rechi_i_bukvy = (
       <Span className="litera0">[ j ]</Span> и соответствующий гласный:
     </Li>
     <Div className="primer">
-      <P>
-        <Span className="litera">Я</Span> &ndash; [jа],{" "}
-        <Span className="litera">е</Span> &ndash; [jэ],{" "}
-        <Span className="litera">ё</Span> &ndash; [jо],{" "}
-        <Span className="litera">ю</Span> &ndash; [jу].
-      </P>
+      <Span className="litera">Я</Span> &ndash; [jа],{" "}
+      <Span className="litera">е</Span> &ndash; [jэ],{" "}
+      <Span className="litera">ё</Span> &ndash; [jо],{" "}
+      <Span className="litera">ю</Span> &ndash; [jу].
     </Div>
     <P>Например:</P>
     <P>
@@ -304,33 +302,33 @@ export const zvuki_rechi_i_bukvy = (
       согласного звука. Согласные звуки <Span className="litera0">[ж]</Span> и{" "}
       <Span className="litera0">[ш]</Span> в современном русском литературном
       языке всегда твёрдые!
-      <Div className="primer">
-          <Em>Шил</Em> [шы&#769;л], <Em>жесть</Em> [жэ&#769;с&rsquo;т&rsquo;],{" "}
-          <Em>шёл</Em> [шо&#769;л].
-      </Div>
+      <T>
+        <Em>Шил</Em> [шы&#769;л], <Em>жесть</Em> [жэ&#769;с&rsquo;т&rsquo;],{" "}
+        <Em>шёл</Em> [шо&#769;л].
+      </T>
       {"\n"}
-        <Strong>2)</Strong> Буква <Span className="litera">и</Span> после
-        согласных букв <Span className="litera">ж, ш</Span> и
-        <Span className="litera">ц</Span> обозначает звук{" "}
-        <Span className="litera0">[ы]</Span>.
-      <Div className="primer">
-          <Em>Шил</Em> [шы&#769;л], <Em>жил</Em> [жы&#769;л], <Em>цирк</Em>{" "}
-          [цы&#769;рк].
-      </Div>
+      <Strong>2)</Strong> Буква <Span className="litera">и</Span> после
+      согласных букв <Span className="litera">ж, ш</Span> и
+      <Span className="litera">ц</Span> обозначает звук{" "}
+      <Span className="litera0">[ы]</Span>.
+      <T>
+        <Em>Шил</Em> [шы&#769;л], <Em>жил</Em> [жы&#769;л], <Em>цирк</Em>{" "}
+        [цы&#769;рк].
+      </T>
       {"\n"}
-        <Strong>3)</Strong> Буквы <Span className="litera">а, у</Span> и{" "}
-        <Span className="litera">о</Span> в сочетаниях{" "}
-        <Span className="litera">ча, ща, чу, щу, чо, що</Span> не
-        свидетельствуют о твёрдости согласных <Span className="litera">ч</Span>{" "}
-        и <Span className="litera">щ</Span>. Согласные звуки{" "}
-        <Span className="litera0">[ч&rsquo;]</Span> и{" "}
-        <Span className="litera0">[щ&rsquo;]</Span> в современном русском
-        литературном языке всегда мягкие.
-      <Div className="primer">
-          <Em>Чум</Em> [ч&rsquo;у&#769;м], (пять) <Em>щук</Em>{" "}
-          [щ&rsquo;у&#769;к], <Em>часть</Em>
-          [ч&rsquo;а&#769;с&rsquo;т&rsquo;], <Em>Щорс</Em> [Щ&rsquo;о&#769;рс].
-      </Div>
+      <Strong>3)</Strong> Буквы <Span className="litera">а, у</Span> и{" "}
+      <Span className="litera">о</Span> в сочетаниях{" "}
+      <Span className="litera">ча, ща, чу, щу, чо, що</Span> не свидетельствуют
+      о твёрдости согласных <Span className="litera">ч</Span> и{" "}
+      <Span className="litera">щ</Span>. Согласные звуки{" "}
+      <Span className="litera0">[ч&rsquo;]</Span> и{" "}
+      <Span className="litera0">[щ&rsquo;]</Span> в современном русском
+      литературном языке всегда мягкие.
+      <T>
+        <Em>Чум</Em> [ч&rsquo;у&#769;м], (пять) <Em>щук</Em> [щ&rsquo;у&#769;к],{" "}
+        <Em>часть</Em>
+        [ч&rsquo;а&#769;с&rsquo;т&rsquo;], <Em>Щорс</Em> [Щ&rsquo;о&#769;рс].
+      </T>
       <Strong>4)</Strong> <Span className="litera">Ь</Span> в конце слова после
       шипящих не является показателем мягкости. Он выполняет грамматическую
       функцию (см. п. 1.11).
@@ -342,99 +340,81 @@ export const zvuki_rechi_i_bukvy = (
       Звук <Span className="litera0">[ j ]</Span> обозначается на письме
       несколькими способами:
     </P>
-    <View>
-      <Li>
-          после гласных и на конце слова &ndash; буквой{" "}
-          <Span className="litera">й</Span>;
-      </Li>
-              <Div className="primer">
-            <Em>
-              Ма<Span className="litera">й</Span>
-            </Em>{" "}
-            [ма&#769;<Span className="litera0">j</Span>].
-        </Div>
-      <Li>
-        <P>
-          в начале слова и между двумя гласными &ndash; с помощью букв{" "}
-          <Span className="litera">е, ё, ю, я</Span>, которые обозначают
-          сочетание согласного <Span className="litera0">[ j ]</Span> и
-          соответствующего гласного;
-        </P>
-        <Div className="primer">
-          <P>
-            <Em>
-              <Span className="litera">Е</Span>л
-            </Em>{" "}
-            [<Span className="litera0">jэ&#769;</Span>л],{" "}
-            <Em>
-              <Span className="litera">я</Span>к
-            </Em>{" "}
-            [<Span className="litera0">jа&#769;</Span>к].
-          </P>
-        </Div>
-      </Li>
-      <Li>
-        <P>
-          на наличие звука <Span className="litera0">[ j ]</Span> указывают
-          также разделительные <Span className="litera">ъ</Span> и{" "}
-          <Span className="litera">ь</Span> &ndash; между согласным и гласными
-          буквами <Span className="litera">е, ё, ю, я</Span>.
-        </P>
-        <Div className="primer">
-          <P>
-            <Em>
-              Съ<Span className="litera">е</Span>л
-            </Em>{" "}
-            [с<Span className="litera0">jэ&#769;</Span>л],{" "}
-            <Em>
-              вь<Span className="litera">ю</Span>н
-            </Em>{" "}
-            [в&rsquo;<Span className="litera0">jу&#769;</Span>н].
-          </P>
-        </Div>
-      </Li>
-    </View>
+    <Li>
+      после гласных и на конце слова &ndash; буквой{" "}
+      <Span className="litera">й</Span>;
+    </Li>
+    <Div className="primer">
+      <Em>
+        Ма<Span className="litera">й</Span>
+      </Em>{" "}
+      [ма&#769;<Span className="litera0">j</Span>].
+    </Div>
+    <Li>
+      в начале слова и между двумя гласными &ndash; с помощью букв{" "}
+      <Span className="litera">е, ё, ю, я</Span>, которые обозначают сочетание
+      согласного <Span className="litera0">[ j ]</Span> и соответствующего
+      гласного;
+    </Li>
+          <Div className="primer">
+        <Em>
+          <Span className="litera">Е</Span>л
+        </Em>{" "}
+        [<Span className="litera0">jэ&#769;</Span>л],{" "}
+        <Em>
+          <Span className="litera">я</Span>к
+        </Em>{" "}
+        [<Span className="litera0">jа&#769;</Span>к].
+      </Div>
+    <Li>
+      на наличие звука <Span className="litera0">[ j ]</Span> указывают также
+      разделительные <Span className="litera">ъ</Span> и{" "}
+      <Span className="litera">ь</Span> &ndash; между согласным и гласными
+      буквами <Span className="litera">е, ё, ю, я</Span>.
+    </Li>
+          <Div className="primer">
+        <Em>
+          Съ<Span className="litera">е</Span>л
+        </Em>{" "}
+        [с<Span className="litera0">jэ&#769;</Span>л],{" "}
+        <Em>
+          вь<Span className="litera">ю</Span>н
+        </Em>{" "}
+        [в&rsquo;<Span className="litera0">jу&#769;</Span>н].
+      </Div>
     <P>
       <Strong>
         <Span className="number">7.</Span>
       </Strong>{" "}
       Буквы <Span className="litera">ъ</Span> и{" "}
-      <Span className="litera">ь</Span>
+      <Span className="litera">ь </Span>
       не обозначают никаких звуков.
     </P>
-    <View>
-      <Li>
-        <P>
-          <Strong>
-            Разделительные <Span className="litera">ъ</Span> и{" "}
-            <Span className="litera">ь</Span>
-          </Strong>{" "}
-          сигнализируют о том, что следующие за ними{" "}
-          <Span className="litera">е, ё, ю, я</Span> обозначают два звука,
-          первый из которых
-          <Span className="litera0">[ j ]</Span>.
-        </P>
-      </Li>
-      <Li>
-        <P>
-          <Strong>
-            Неразделительный <Span className="litera">ь</Span>
-          </Strong>
-          :
-        </P>
-        1) указывает на мягкость предшествующего согласного:
-        <Div className="primer">
-          <P>
-            <Em>Мель</Em> [м&rsquo;э&#769;л&rsquo;];
-          </P>
-        </Div>
-        2) выполняет грамматическую функцию.
-      </Li>
-      <Div className="primer">
-          Например, в слове <Em>мышь</Em> <Span className="litera">ь</Span> не
-          указывает на мягкость предшествующего согласного, а сигнализирует о
-          том, что данное существительное женского рода.
-      </Div>
-    </View>
+    <Li>
+        &#8226; <Strong>
+          Разделительные <Span className="litera">ъ</Span> и{" "}
+          <Span className="litera">ь</Span>
+        </Strong>{" "}
+        сигнализируют о том, что следующие за ними{" "}
+        <Span className="litera">е, ё, ю, я</Span> обозначают два звука, первый
+        из которых
+        <Span className="litera0">[ j ]</Span>.
+    </Li>
+    <Li>
+      &#8226; <Strong>
+        Неразделительный <Span className="litera">ь</Span>
+      </Strong>
+      : 1) указывает на мягкость предшествующего согласного:
+    </Li>
+
+    <Div className="primer">
+        <Em>Мель</Em> [м&rsquo;э&#769;л&rsquo;];
+    </Div>
+    <Li>2) выполняет грамматическую функцию.</Li>
+    <Div className="primer">
+      Например, в слове <Em>мышь</Em> <Span className="litera">ь</Span> не
+      указывает на мягкость предшествующего согласного, а сигнализирует о том,
+      что данное существительное женского рода.
+    </Div>
   </View>
 );

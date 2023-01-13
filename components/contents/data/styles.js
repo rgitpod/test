@@ -1,14 +1,16 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions } from "react-native";
+
+const wdt = Dimensions.get("window").width;
 
 export const styles = StyleSheet.create({
   strong: {
-    fontFamily: 'Rubik-SemiBold'
+    fontFamily: "Rubik-SemiBold",
   },
   italic: {
-    fontStyle: 'italic'
+    fontStyle: "italic",
   },
   number: {
-    overflow: 'hidden',
+    overflow: "hidden",
     borderRadius: 9,
     fontSize: 20,
     paddingRight: 4,
@@ -21,43 +23,45 @@ export const styles = StyleSheet.create({
     margin: 4,
     marginTop: 6,
     fontSize: 18,
-    fontFamily: 'Rubik-Regular',
-     width: '100%'
+    fontFamily: "Rubik-Regular",
   },
   li: {
     paddingLeft: 16,
     fontSize: 18,
-    fontFamily: 'Rubik-Regular'
+    fontFamily: "Rubik-Regular",
   },
   litera0: {
-    color: 'black',
+    color: "black",
     fontSize: 19,
-    textShadowRadius: 1.8
+    textShadowRadius: 1.8,
   },
   litera: {
-    color: 'black',
+    color: "black",
     fontSize: 19,
-    textShadowRadius: 1.8
+    textShadowRadius: 1.8,
   },
   alertText: {
-    fontFamily: 'Rubik-SemiBoldItalic',
-    fontSize: 14
+    fontFamily: "Rubik-SemiBoldItalic",
+    fontSize: 14,
   },
   alert: {
-    backgroundColor: '#d2d2d4',
+    backgroundColor: "#d2d2d4",
     borderTopWidth: 1,
     borderBottomWidth: 1,
     fontSize: 18,
-    fontFamily: 'Rubik-Regular',
-  backgroundColor: 'blue',
+    fontFamily: "Rubik-Regular",
   },
   primer: {
     paddingLeft: 16,
+    marginTop: 2,
     fontSize: 18,
-    fontFamily: 'Rubik-Regular',
-     backgroundColor: 'green',//Colors.transparentColor,
-  fontSize: 18,
-  color: 'white',
-  width: Dimensions.get('window').width
-  }
+    fontFamily: "Rubik-Regular",
+    fontSize: 18,
+  },
+  t: {
+    fontFamily: "Rubik-Regular",
+    fontSize: 18,
+    paddingLeft: 1,
+    width: wdt,
+  },
 });
