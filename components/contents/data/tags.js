@@ -1,18 +1,19 @@
-import { createContext, useContext } from "react";
-import { Text, View } from "react-native";
+import { Text, View, Dimensions } from "react-native";
 import { styles } from "./styles";
 import { useTheme } from "@react-navigation/native";
 
-const TagContext = createContext();
-
 const P = ({ children }) => {
-  const tag = useContext(TagContext);
   const { colors } = useTheme();
-  return <Text style={[styles.p, { color: colors.text }]}>{children}</Text>;
+  return (
+    <View>
+      <Text style={[styles.p, { color: colors.text }]}>{children}</Text>
+    </View>
+  );
 };
 
-const Strong = ({ children }) => {
-  const { colors } = useTheme();
+
+const Strong = ({ children }) => {  
+  const { colors } = useTheme();  
   return (
     <Text style={[styles.strong, { color: colors.text }]}>{children}</Text>
   );
@@ -32,10 +33,12 @@ const Span = ({ children, className }) => {
     return (
       <View>
         <Text
-          style={[
-            styles.number,
-            { color: colors.text, backgroundColor: colors.number },
-          ]}
+          style={{
+            fontWeight: "700",
+            color: colors.text,
+            backgroundColor: colors.number,
+            ...styles.number,
+          }}
         >
           {children}
         </Text>
@@ -57,17 +60,22 @@ const Span = ({ children, className }) => {
 };
 
 const Li = ({ children }) => {
+  const { colors } = useTheme();
   return (
-    <TagContext.Provider value="&#x2023; ">
+    <View>
       <Text style={styles.li}>{children}</Text>
-    </TagContext.Provider>
+    </View>
   );
 };
 
 const Div = ({ children, className }) => {
   const { colors } = useTheme();
   return (
-    <View><Text style={[styles[className], { color: colors.text }]}>{children}</Text></View>
+    <View>
+      <Text style={[styles[className], { color: colors.text }]}>
+        {children}
+      </Text>
+    </View>
   );
 };
 
@@ -87,4 +95,11 @@ const Sup = ({ children }) => {
   );
 };
 
-export { P, Strong, Em, Span, Li, Div, Sup };
+
+
+const T = ({ children }) => { 
+  return <View><Text style={styles.t}>{children}</Text></View>
+}
+
+
+export { P, Strong, Em, Span, Li, Div, Sup, T };

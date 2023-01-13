@@ -19,16 +19,12 @@ export const foneticheskaya_transkripciya = (
       Чтобы отличить звук от буквы, звуки заключаются в квадратные скобки
       &ndash; <Span className="litera0">[ ]</Span>.
     </P>
-    <Div className="primer">
-      <P>[а], [о], [л].</P>
-    </Div>
+    <Div className="primer">[а], [о], [л].</Div>
     <P>
       В квадратные скобки заключается и весь транскрибируемый элемент: слово,
       словосочетание, предложение и т.д.
     </P>
-    <Div className="primer">
-      <P>[сто&#769;л], [до&#769;м бы&#769;л ма&#769;л].</P>
-    </Div>
+    <Div className="primer">[сто&#769;л], [до&#769;м бы&#769;л ма&#769;л].</Div>
     <P>
       <Strong>
         <Span className="number">2.</Span>
@@ -44,9 +40,7 @@ export const foneticheskaya_transkripciya = (
       <Span className="litera">й</Span>.
     </P>
     <Div className="primer">
-      <P>
-        <Em>Май</Em> [ма&#769;j], <Em>я</Em> [jа&#769;].
-      </P>
+      <Em>Май</Em> [ма&#769;j], <Em>я</Em> [jа&#769;].
     </Div>
     <P>
       Для обозначения этого звука используется и знак{" "}
@@ -62,9 +56,7 @@ export const foneticheskaya_transkripciya = (
       <Span className="litera">э</Span>.
     </P>
     <Div className="primer">
-      <P>
-        <Em>Сел</Em> [с&rsquo;э&#769;л], <Em>эти</Em> [э&#769;т&rsquo;и].
-      </P>
+      <Em>Сел</Em> [с&rsquo;э&#769;л], <Em>эти</Em> [э&#769;т&rsquo;и].
     </Div>
     <P>
       <Strong>
@@ -74,10 +66,7 @@ export const foneticheskaya_transkripciya = (
       сверху у буквы &ndash; указывает на мягкий согласный.
     </P>
     <Div className="primer">
-      <P>
-        <Em>Мир</Em> [м&rsquo;и&#769;р], <Em>медь</Em>{" "}
-        [м&rsquo;э&#769;д&rsquo;].
-      </P>
+      <Em>Мир</Em> [м&rsquo;и&#769;р], <Em>медь</Em> [м&rsquo;э&#769;д&rsquo;].
     </Div>
     <P>
       <Strong>
@@ -87,9 +76,7 @@ export const foneticheskaya_transkripciya = (
       <Span className="litera0">[:]</Span> обозначают долгий согласный.
     </P>
     <Div className="primer">
-      <P>
-        <Em>Сжал</Em> [ж:а&#769;л].
-      </P>
+      <Em>Сжал</Em> [ж:а&#769;л].
     </Div>
   </View>
 );

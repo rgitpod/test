@@ -8,10 +8,10 @@ const Row = ({ children }) => {
   return <View style={styles.row}>{children}</View>;
 };
 
-const Col = ({ children }) => {
+const Col = ({ children, pr }) => {
   return (
-    <View style={styles.col}>
-      <Text>{children}</Text>
+    <View style={[styles.col, styles[pr]]}>
+      <Text style={[styles["text" + pr], styles.text]}>{children}</Text>
     </View>
   );
 };
@@ -22,7 +22,22 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     padding: 5,
     flex: 1,
-    backgroundColor: '#d6d6d6'
+    backgroundColor: "#d6d6d6",
+  },
+  text: {
+    fontFamily: "Rubik-Regular",
+    fontSize: 18,
+  },
+  colHed: {
+    borderRightWidth: 1,
+    borderBottomWidth: 1,
+    padding: 5,
+    flex: 1,
+    backgroundColor: "#bdbdbd",
+  },
+  textcolHed: {
+    fontSize: 15,
+    fontFamily: "Rubik-SemiBold",
   },
   row: {
     flexDirection: "row",
@@ -30,7 +45,7 @@ const styles = StyleSheet.create({
   table: {
     borderLeftWidth: 1,
     borderTopWidth: 1,
-    margin: 7
+    margin: 7,
   },
 });
 

@@ -1,11 +1,13 @@
 import { View, ScrollView, Text } from "react-native";
 import MenuButton from "./MenuButton";
 import { SafeAreaView } from 'react-native-safe-area-context';
+import AppHeader from './AppHeader'
 
 
-export default function Home({ navigation, route }) {  
+export default function Home({ navigation, route, onPress }) {  
   return (
     <SafeAreaView style={{flex: 1, justifyContent: 'center'}}>
+      <AppHeader onPress={onPress} navigation={navigation}/>
     <View>
       <MenuButton
         title="Фонетика. Графика"
@@ -40,6 +42,11 @@ export default function Home({ navigation, route }) {
         title="Культура речи"
         navTo="Culture"
         onPress={() => navigation.navigate(navigation)}
+      />
+      <MenuButton
+        title="Test"
+        navTo="Test"
+        navigation={navigation}
       />
     </View>
     </SafeAreaView>
