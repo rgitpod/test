@@ -18,10 +18,10 @@ export default function Paragraph({ navigation, route }) {
 
 const styles = StyleSheet.create({
   btn: {
-    backgroundColor: "gray",
+    backgroundColor: 'rgba(193, 194, 197, 0.8)',
+    padding: -15,
     position: "absolute",
-    height: 60,
-    top: Dimensions.get("window").height - 60,
-    left: 30,
+    top: Dimensions.get("window").height - 45,
+    left: 40,
   },
 });

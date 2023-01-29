@@ -10,7 +10,7 @@ const Theme = StyleSheet.create({
     text: '#0f0f0f',
     border: 'rgb(199, 199, 204)',
     notification: 'rgb(255, 69, 58)',
-    number: '#A6A7AB',
+    number: '#c0c1c4',
     litera0: '#5c5c5c'
   }},
   dark: {dark: true,
