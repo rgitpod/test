@@ -1,14 +1,14 @@
 import { StyleSheet, View, Dimensions } from "react-native";
 import SvgButton from "./SvgButton";
 import { useTheme } from '@react-navigation/native'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import { Theme } from './Theme'
 
-export default function AppFooter({ navigation, onPress }) {
+
+export default function AppFooter({ navigation, route, favsList }) {
   const { colors } = useTheme()
+
   return (
     <View style={[styles.footer, {backgroundColor: colors.card}]}>
-      <SvgButton size={26} name="exit" onPress={() => navigation.goBack()}/>
+      <SvgButton size={26} name={route.name == 'Home' ? 'exit' : 'back'} onPress={() => navigation.goBack()}/>
       <SvgButton size={26} name="search" onPress={() => navigation.navigate('Search')}/>
       <SvgButton size={26} name="bookmark" onPress={() => navigation.navigate('Bookmark')}/>
     </View>

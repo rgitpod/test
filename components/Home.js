@@ -3,7 +3,6 @@ import MenuButton from "./MenuButton";
 import { SafeAreaView } from 'react-native-safe-area-context';
 import AppHeader from './AppHeader'
 
-
 export default function Home({ navigation, route, onPress }) {  
   return (
     <SafeAreaView style={{flex: 1, justifyContent: 'center'}}>
@@ -26,7 +25,7 @@ export default function Home({ navigation, route, onPress }) {
       />
       <MenuButton
         title="Орфография"
-        onPress={() => navigation.navigate("Spelling")}
+        onPress={() => navigation.navigate(navigation)}
       />
       <MenuButton
         title="Морфология"
