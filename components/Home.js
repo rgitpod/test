@@ -3,7 +3,7 @@ import MenuButton from "./MenuButton";
 import { SafeAreaView } from 'react-native-safe-area-context';
 import AppHeader from './AppHeader'
 
-export default function Home({ navigation, route, onPress }) {  
+export default function Home({ navigation, onPress }) {  
   return (
     <SafeAreaView style={{flex: 1, justifyContent: 'center'}}>
       <AppHeader onPress={onPress} navigation={navigation}/>
