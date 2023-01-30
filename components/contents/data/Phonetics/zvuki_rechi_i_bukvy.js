@@ -207,12 +207,11 @@ export const zvuki_rechi_i_bukvy = (
     <Div className="alert">
       <Strong>1)</Strong> <Span className="litera">Я, е, ё, ю</Span> &ndash; это
       буквы, а не звуки! Поэтому они никогда не используются в транскрипции.
-      {"\n"}
       {"\n"} <Strong>2)</Strong> Буквы <Span className="litera">а</Span> и{" "}
       <Span className="litera">я</Span>, <Span className="litera">о</Span> и{" "}
       <Span className="litera">ё</Span>, <Span className="litera">э</Span> и{" "}
       <Span className="litera">е</Span> обозначают соответственно:{" "}
-      <Span className="litera">а</Span>и <Span className="litera">я</Span>{" "}
+      <Span className="litera">а</Span> и <Span className="litera">я</Span>{" "}
       &ndash; звук [а]; <Span className="litera">о</Span> и{" "}
       <Span className="litera">ё</Span>
       &ndash; звук [о], <Span className="litera">э</Span> и{" "}
@@ -306,7 +305,6 @@ export const zvuki_rechi_i_bukvy = (
         <Em>Шил</Em> [шы&#769;л], <Em>жесть</Em> [жэ&#769;с&rsquo;т&rsquo;],{" "}
         <Em>шёл</Em> [шо&#769;л].
       </T>
-      {"\n"}
       <Strong>2)</Strong> Буква <Span className="litera">и</Span> после
       согласных букв <Span className="litera">ж, ш</Span> и
       <Span className="litera">ц</Span> обозначает звук{" "}
@@ -315,7 +313,6 @@ export const zvuki_rechi_i_bukvy = (
         <Em>Шил</Em> [шы&#769;л], <Em>жил</Em> [жы&#769;л], <Em>цирк</Em>{" "}
         [цы&#769;рк].
       </T>
-      {"\n"}
       <Strong>3)</Strong> Буквы <Span className="litera">а, у</Span> и{" "}
       <Span className="litera">о</Span> в сочетаниях{" "}
       <Span className="litera">ча, ща, чу, щу, чо, що</Span> не свидетельствуют
