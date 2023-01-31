@@ -1,19 +1,53 @@
-import { StyleSheet, Text, View, Button } from "react-native";
+import { View, ScrollView, Text } from "react-native";
 import MenuButton from "./MenuButton";
+import { SafeAreaView } from 'react-native-safe-area-context';
+import AppHeader from './AppHeader'
 
-export default function Home({ navigation, route }) {
-  console.log(route)
+export default function Home({ navigation, onPress }) {  
   return (
-    <>
-      <MenuButton title="Фонетика" navTo="Phonetics" navigation={navigation} />
-      <Button
-        title="Морфология"
-        onPress={() => navigation.navigate("Morphemics")}
+    <SafeAreaView style={{flex: 1, justifyContent: 'center'}}>
+      <AppHeader onPress={onPress} navigation={navigation}/>
+    <View>
+      <MenuButton
+        title="Фонетика. Графика"
+        navTo="Phonetics"
+        navigation={navigation}
       />
-      <Button
+      <MenuButton
+        title="Морфемика. Словообразование"
+        navTo="Morphemics"
+        onPress={() => navigation.navigate(navigation)}
+      />
+      <MenuButton
+        title="Лексикология"
+        navTo="Lexicology"
+        onPress={() => navigation.navigate(navigation)}
+      />
+      <MenuButton
         title="Орфография"
-        onPress={() => navigation.navigate("Spelling")}
+        onPress={() => navigation.navigate(navigation)}
       />
-    </>
+      <MenuButton
+        title="Морфология"
+        navTo="Morphology"
+        onPress={() => navigation.navigate(navigation)}
+      />
+      <MenuButton
+        title="Синтаксис"
+        navTo="Syntax"
+        onPress={() => navigation.navigate(navigation)}
+      />
+      <MenuButton
+        title="Культура речи"
+        navTo="Culture"
+        onPress={() => navigation.navigate(navigation)}
+      />
+      <MenuButton
+        title="Test"
+        navTo="Test"
+        navigation={navigation}
+      />
+    </View>
+    </SafeAreaView>
   );
 }

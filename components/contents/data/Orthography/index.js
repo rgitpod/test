@@ -1,6 +1,6 @@
-import { Spell } from "./Spelling/Spell";
+import { Spell } from "./Spell";
 
-export const spellingIndex = [
+export const Orthography = [
   {
     title: "Правописание",
     text: Spell

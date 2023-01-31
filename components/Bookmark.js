@@ -1,23 +1,30 @@
-import {  useEffect, useContext } from "react";
-import { StyleSheet, Text, ScrollView, View, Pressable } from "react-native";
+import { useMemo, useEffect, useContext, useRef } from 'react'
+import { ScrollView, Text, StyleSheet, View, Pressable } from 'react-native'
 import { index } from "./contents/data/index";
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useTheme } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import SvgButton from "./SvgButton";
 import  {Context} from './Context'
 
 const Separator = () => <View style={styles.separator} />;
 
-export default function Content({ navigation, route }) {
-  const {favs} = useContext(Context);
+export default function Bookmark({ navigation }) {
   const {setFavs} = useContext(Context)
+  const {favs} = useContext(Context)
+  const keys = Object.keys(favs)
   const { colors } = useTheme();
-  const routeName = route.name;
+  const initFavs = useRef()
+  const initKeys = useRef()
   
   useEffect(() => {
     saveFavs(favs);
   }, [favs]);
+
+  useMemo(() => {
+     initFavs.current = JSON.parse(JSON.stringify(favs))
+     initKeys.current = keys
+  }, [])
 
   const saveFavs = async (n) => {
     try {
@@ -28,36 +35,34 @@ export default function Content({ navigation, route }) {
     }
   };
 
-  const addFav = (favIndex) => {
+  const addFav = (secName ,favIndex) => {
     const newFavs = {};
-    if (favs[routeName] == undefined) {
-      newFavs[routeName] = [favIndex];
+    if (favs[secName] == undefined) {
+      newFavs[secName] = [favIndex];
     } else {
-      newFavs[routeName] = [...favs[routeName], favIndex];
+      newFavs[secName] = [...favs[secName], favIndex];
     }    
-    setFavs({ ...favs, ...newFavs });
+    setFavs({ ...favs, ...newFavs })
   };
 
-  const removeFav = (favIndex) => {
+  const removeFav = (secName, favIndex) => {
     const newFavs = {...favs};
-    const index = favs[routeName].indexOf(favIndex);
-    newFavs[routeName].splice(index, 1);
-    if (newFavs[routeName].length == 0 ) {
-      delete newFavs[routeName]
+    const index = favs[secName].indexOf(favIndex);
+    newFavs[secName].splice(index, 1);
+    if (newFavs[secName].length == 0 ) {
+      delete newFavs[secName]
     }
-    setFavs(newFavs);
+    setFavs(newFavs)
   };
-
-
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView style={{ marginBottom: 35 }}>
-        {index[routeName].map((item, i) => (
-          <View style={{ paddingHorizontal: 30 }} key={i}>
+        {initKeys.current.map((sectionName) => initFavs.current[sectionName].map((contentName, i) => {
+          return (<View style={{ paddingHorizontal: 30 }} key={i}>
             <View style={styles.btn}>
               <Pressable
                 onPress={() => {
-                  navigation.navigate("Paragraph", { name: routeName, id: i });
+                  navigation.navigate("Paragraph", { name: sectionName, id: contentName });
                 }}
                 style={[styles.desc, { flexGrow: 1 }]}
               >
@@ -67,28 +72,28 @@ export default function Content({ navigation, route }) {
                     fontFamily: "Rubik-Regular",
                   }}
                 >
-                  {item.title}
+                  {index[sectionName][contentName].title}
                 </Text>
               </Pressable>
               <Pressable style={[styles.desc, { width: 20 }]}>
-                {favs[routeName]?.includes(i) ? (
+                {favs[sectionName]?.includes(contentName) ? (
                   <SvgButton
                     size={26}
                     name="removeFav"
-                    onPress={() => removeFav(i)}
+                    onPress={() => removeFav(sectionName, contentName)}
                   />
                 ) : (
                   <SvgButton
                     size={26}
                     name="addFav"
-                    onPress={() => addFav(i)}
+                    onPress={() => addFav(sectionName, contentName)}
                   />
                 )}
               </Pressable>
             </View>
             <Separator />
-          </View>
-        ))}
+          </View>)
+        }))}
       </ScrollView>
     </SafeAreaView>
   );
