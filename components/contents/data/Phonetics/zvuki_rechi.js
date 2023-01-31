@@ -2,7 +2,7 @@ import { View } from "react-native";
 import { Strong, Span, P, Em, Li, Div } from "../tags";
 
 export const zvuki_rechi = (
-  <View>
+  <View style={{padding: 20}}>
     <P>
       <Strong>Звуки речи</Strong> &ndash; это звуки, из которых состоят слова. Звук есть самая мелкая единица языка.
     </P>
