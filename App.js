@@ -61,7 +61,7 @@ export default function App() {
   };
 
   return (
-    <Context.Provider value={{favs, setFavs}}>
+    <Context.Provider value={{favs, setFavs, FontSizes}}>
       <SafeAreaProvider>
         <NavigationContainer theme={theme}>
           <Stack.Navigator>
@@ -99,4 +99,16 @@ export default function App() {
       </SafeAreaProvider>
     </Context.Provider>
   );
+}
+
+const FontSizes = {
+  number: 18,
+  p: 18,
+  li: 18,
+  litera0: 18,
+  litera: 18,
+  alertText: 18,
+  alert: 18,
+  primer: 18,
+  t: 18
 }

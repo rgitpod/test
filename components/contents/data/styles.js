@@ -20,15 +20,17 @@ export const styles = StyleSheet.create({
     marginRight: 5,
   },
   p: {
-    margin: 4,
+    margin: 5,
     marginTop: 6,
     fontSize: 18,
     fontFamily: "Rubik-Regular",
+    textAlign: 'justify'
   },
   li: {
     paddingLeft: 16,
     fontSize: 18,
     fontFamily: "Rubik-Regular",
+    textAlign: 'justify'
   },
   litera0: {
     color: "black",
