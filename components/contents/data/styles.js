@@ -22,12 +22,12 @@ export const styles = StyleSheet.create({
     margin: 5,
     marginTop: 6,
     fontFamily: "Rubik-Regular",
-    textAlign: 'justify'
+    textAlign: "justify",
   },
   li: {
     paddingLeft: 16,
     fontFamily: "Rubik-Regular",
-    textAlign: 'justify'
+    textAlign: "justify",
   },
   litera0: {
     color: "black",
@@ -42,13 +42,18 @@ export const styles = StyleSheet.create({
   alertText: {
     fontFamily: "Rubik-SemiBoldItalic",
     fontSize: 14,
+    marginRight: 12,
+    marginTop: 2,
+    textAlign: "right",
   },
   alert: {
-    backgroundColor: "#d2d2d4",
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
+    backgroundColor: "#d7d7d7",
+    borderWidth: 1,
+    borderRadius: 5,
     fontSize: 18,
     fontFamily: "Rubik-Regular",
+    padding: 5,
+    margin: 5,
   },
   primer: {
     paddingLeft: 16,
@@ -60,8 +65,8 @@ export const styles = StyleSheet.create({
   t: {
     fontFamily: "Rubik-Regular",
     fontSize: 18,
-    paddingLeft: 1,
+    paddingLeft: 8,
+    marginBottom: 5,
     width: wdt,
   },
 });
-
