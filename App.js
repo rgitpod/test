@@ -14,14 +14,13 @@ import * as SplashScreen from "expo-splash-screen";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Test from "./components/Test";
-import {Context} from './components/Context'
+import { Context } from "./components/Context";
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createNativeStackNavigator();
 
-
 export default function App() {
-  const [theme, setTheme] = useState(Theme.light);
+  const [settings, setSettings] = useState({ fontSizes: FS, mod: Theme.light });
   const [favs, setFavs] = useState({});
   const [fontsLoaded] = useFonts({
     "Rubik-Regular": require("./assets/fonts/Rubik-Regular.ttf"),
@@ -32,15 +31,40 @@ export default function App() {
   });
 
   useEffect(() => {
-    getFavs();
+    initSettings();
   }, []);
 
-  const getFavs = async () => {
+  const removeValue = async () => {
+    try {
+      await AsyncStorage.removeItem("settings");
+    } catch (e) {
+      // remove error
+    }
+
+    console.log("Done.");
+  };
+
+  const initSettings = async () => {
     try {
       const favs = await AsyncStorage.getItem("favs");
+      const sett = await AsyncStorage.getItem("settings");
       if (favs != null) {
         setFavs(JSON.parse(favs));
       }
+      if (sett != null) {
+        FS = { ...JSON.parse(sett) };
+        console.log(FS);
+        setSettings(FS);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const saveSettings = (n) => {
+    try {
+      const stringSet = JSON.stringify(n);
+      AsyncStorage.setItem("settings", stringSet);
     } catch (error) {
       console.log(error);
     }
@@ -57,13 +81,19 @@ export default function App() {
   }
 
   const changeTheme = () => {
-    setTheme(() => (theme.dark ? Theme.light : Theme.dark));
+    let newSet = {};
+    setSettings(() =>
+      settings.mod.dark
+        ? (newSet = { ...settings, mod: Theme.light })
+        : (newSet = { ...settings, mod: Theme.dark })
+    );
+    saveSettings(newSet);
   };
 
   return (
-    <Context.Provider value={{favs, setFavs, FontSizes}}>
+    <Context.Provider value={{ favs, setFavs, settings, setSettings }}>
       <SafeAreaProvider>
-        <NavigationContainer theme={theme}>
+        <NavigationContainer theme={settings.mod}>
           <Stack.Navigator>
             <Stack.Group
               screenOptions={{
@@ -73,7 +103,7 @@ export default function App() {
               }}
             >
               <Stack.Screen name="Home">
-                {(props) => <Home {...props} onPress={changeTheme} />}
+                {(props) => <Home {...props} />}
               </Stack.Screen>
               <Stack.Screen name="Morphemics" component={Content} />
               <Stack.Screen name="Phonetics" component={Content} />
@@ -83,11 +113,7 @@ export default function App() {
               <Stack.Screen name="Syntax" component={Content} />
               <Stack.Screen name="Culture" component={Content} />
               <Stack.Screen name="Test" component={Test} />
-              <Stack.Screen
-                name="Paragraph"
-                component={Paragraph}
-                options={{ headerShown: false }}
-              />
+              <Stack.Screen name="Paragraph" component={Paragraph} />
             </Stack.Group>
             <Stack.Group screenOptions={{ presentation: "modal" }}>
               <Stack.Screen name="Search" component={Search} />
@@ -101,14 +127,8 @@ export default function App() {
   );
 }
 
-const FontSizes = {
-  number: 18,
-  p: 18,
-  li: 18,
-  litera0: 18,
-  litera: 18,
-  alertText: 18,
-  alert: 18,
-  primer: 18,
-  t: 18
-}
+let FS = {
+  number: 20,
+  text: 18,
+  alertText: 15,
+};

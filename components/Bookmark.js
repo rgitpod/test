@@ -1,4 +1,4 @@
-import { useMemo, useEffect, useContext, useRef } from 'react'
+import { useMemo, useContext, useRef } from 'react'
 import { ScrollView, Text, StyleSheet, View, Pressable } from 'react-native'
 import { index } from "./contents/data/index";
 import AsyncStorage from '@react-native-async-storage/async-storage'
@@ -17,10 +17,6 @@ export default function Bookmark({ navigation }) {
   const initFavs = useRef()
   const initKeys = useRef()
   
-  useEffect(() => {
-    saveFavs(favs);
-  }, [favs]);
-
   useMemo(() => {
      initFavs.current = JSON.parse(JSON.stringify(favs))
      initKeys.current = keys
@@ -43,6 +39,7 @@ export default function Bookmark({ navigation }) {
       newFavs[secName] = [...favs[secName], favIndex];
     }    
     setFavs({ ...favs, ...newFavs })
+    saveFavs({ ...favs, ...newFavs })
   };
 
   const removeFav = (secName, favIndex) => {
@@ -53,6 +50,7 @@ export default function Bookmark({ navigation }) {
       delete newFavs[secName]
     }
     setFavs(newFavs)
+    saveFavs(newFavs)
   };
   return (
     <SafeAreaView style={{ flex: 1 }}>

@@ -1,19 +1,29 @@
+import { useContext } from "react";
 import { Text, View, Dimensions } from "react-native";
 import { styles } from "./styles";
 import { useTheme } from "@react-navigation/native";
+import { Context } from "../../Context";
 
 const P = ({ children }) => {
   const { colors } = useTheme();
+  const { settings } = useContext(Context);
+
   return (
     <View>
-      <Text style={[styles.p, { color: colors.text }]}>{children}</Text>
+      <Text
+        style={[
+          styles.p,
+          { color: colors.text, fontSize: settings.fontSizes.text },
+        ]}
+      >
+        {children}
+      </Text>
     </View>
   );
 };
 
-
-const Strong = ({ children }) => {  
-  const { colors } = useTheme();  
+const Strong = ({ children }) => {
+  const { colors } = useTheme();
   return (
     <Text style={[styles.strong, { color: colors.text }]}>{children}</Text>
   );
@@ -28,6 +38,7 @@ const Em = ({ children }) => {
 
 const Span = ({ children, className }) => {
   const { colors } = useTheme();
+  const { settings } = useContext(Context);
 
   if (className === "number") {
     return (
@@ -37,6 +48,7 @@ const Span = ({ children, className }) => {
             fontWeight: "700",
             color: colors.text,
             backgroundColor: colors.number,
+            fontSize: settings.fontSizes.number,
             ...styles.number,
           }}
         >
@@ -61,18 +73,27 @@ const Span = ({ children, className }) => {
 
 const Li = ({ children }) => {
   const { colors } = useTheme();
+  const { settings } = useContext(Context);
   return (
     <View>
-      <Text style={styles.li}>{children}</Text>
+      <Text style={[styles.li, { fontSize: settings.fontSizes.text }]}>
+        {children}
+      </Text>
     </View>
   );
 };
 
 const Div = ({ children, className }) => {
   const { colors } = useTheme();
+  const { settings } = useContext(Context);
   return (
     <View>
-      <Text style={[styles[className], { color: colors.text }]}>
+      <Text
+        style={[
+          styles[className],
+          { color: colors.text, fontSize: settings.fontSizes.text },
+        ]}
+      >
         {children}
       </Text>
     </View>
@@ -95,11 +116,12 @@ const Sup = ({ children }) => {
   );
 };
 
-
-
-const T = ({ children }) => { 
-  return <View><Text style={styles.t}>{children}</Text></View>
-}
-
+const T = ({ children }) => {
+  return (
+    <View>
+      <Text style={styles.t}>{children}</Text>
+    </View>
+  );
+};
 
 export { P, Strong, Em, Span, Li, Div, Sup, T };

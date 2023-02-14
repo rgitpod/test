@@ -1,4 +1,4 @@
-import {  useEffect, useContext } from "react";
+import {  useContext } from "react";
 import { StyleSheet, Text, ScrollView, View, Pressable } from "react-native";
 import { index } from "./contents/data/index";
 import { useTheme } from "@react-navigation/native";
@@ -13,11 +13,7 @@ export default function Content({ navigation, route }) {
   const {favs} = useContext(Context);
   const {setFavs} = useContext(Context)
   const { colors } = useTheme();
-  const routeName = route.name;
-  
-  useEffect(() => {
-    saveFavs(favs);
-  }, [favs]);
+  const routeName = route.name;  
 
   const saveFavs = async (n) => {
     try {
@@ -36,6 +32,7 @@ export default function Content({ navigation, route }) {
       newFavs[routeName] = [...favs[routeName], favIndex];
     }    
     setFavs({ ...favs, ...newFavs });
+    saveFavs({ ...favs, ...newFavs })
   };
 
   const removeFav = (favIndex) => {
@@ -46,12 +43,13 @@ export default function Content({ navigation, route }) {
       delete newFavs[routeName]
     }
     setFavs(newFavs);
+    saveFavs(newFavs);
   };
 
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <ScrollView style={{ marginBottom: 35 }}>
+      <ScrollView contentContainerStyle={{ paddingBottom: 75 }}>
         {index[routeName].map((item, i) => (
           <View style={{ paddingHorizontal: 30 }} key={i}>
             <View style={styles.btn}>

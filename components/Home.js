@@ -1,12 +1,10 @@
-import { View, ScrollView, Text } from "react-native";
+import { View } from "react-native";
 import MenuButton from "./MenuButton";
 import { SafeAreaView } from 'react-native-safe-area-context';
-import AppHeader from './AppHeader'
 
-export default function Home({ navigation, onPress }) {  
+export default function Home({ navigation }) {  
   return (
     <SafeAreaView style={{flex: 1, justifyContent: 'center'}}>
-      <AppHeader onPress={onPress} navigation={navigation}/>
     <View>
       <MenuButton
         title="Фонетика. Графика"

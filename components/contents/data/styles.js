@@ -12,7 +12,6 @@ export const styles = StyleSheet.create({
   number: {
     overflow: "hidden",
     borderRadius: 9,
-    fontSize: 20,
     paddingRight: 4,
     paddingLeft: 5,
     marginTop: -3,
@@ -22,13 +21,11 @@ export const styles = StyleSheet.create({
   p: {
     margin: 5,
     marginTop: 6,
-    fontSize: 18,
     fontFamily: "Rubik-Regular",
     textAlign: 'justify'
   },
   li: {
     paddingLeft: 16,
-    fontSize: 18,
     fontFamily: "Rubik-Regular",
     textAlign: 'justify'
   },
@@ -67,3 +64,4 @@ export const styles = StyleSheet.create({
     width: wdt,
   },
 });
+
