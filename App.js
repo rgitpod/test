@@ -40,7 +40,6 @@ export default function App() {
     } catch (e) {
       // remove error
     }
-
     console.log("Done.");
   };
 
@@ -53,7 +52,6 @@ export default function App() {
       }
       if (sett != null) {
         FS = { ...JSON.parse(sett) };
-        console.log(FS);
         setSettings(FS);
       }
     } catch (error) {
@@ -98,7 +96,12 @@ export default function App() {
             <Stack.Group
               screenOptions={{
                 header: (props) => {
-                  return <AppFooter {...props} onPress={changeTheme} />;
+                  return (
+                    <AppFooter
+                      {...props}
+                      onPress={changeTheme}
+                    />
+                  );
                 },
               }}
             >
@@ -131,4 +134,5 @@ let FS = {
   number: 20,
   text: 18,
   alertText: 15,
+  litera: 18.5,
 };

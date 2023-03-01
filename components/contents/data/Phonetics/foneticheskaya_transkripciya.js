@@ -19,12 +19,12 @@ export const foneticheskaya_transkripciya = (
       Чтобы отличить звук от буквы, звуки заключаются в квадратные скобки
       &ndash; <Span className="litera0">[ ]</Span>.
     </P>
-    <Div className="primer">[а], [о], [л].</Div>
+    <Div className="primer"><P>[а], [о], [л].</P></Div>
     <P>
       В квадратные скобки заключается и весь транскрибируемый элемент: слово,
       словосочетание, предложение и т.д.
     </P>
-    <Div className="primer">[сто&#769;л], [до&#769;м бы&#769;л ма&#769;л].</Div>
+    <Div className="primer"><P>[сто&#769;л], [до&#769;м бы&#769;л ма&#769;л].</P></Div>
     <P>
       <Strong>
         <Span className="number">2.</Span>
@@ -39,8 +39,8 @@ export const foneticheskaya_transkripciya = (
       Знак <Span className="litera0">[ j ]</Span> обозначает согласный{" "}
       <Span className="litera">й</Span>.
     </P>
-    <Div className="primer">
-      <Em>Май</Em> [ма&#769;j], <Em>я</Em> [jа&#769;].
+    <Div className="primer"><P>
+      <Em>Май</Em> [ма&#769;j], <Em>я</Em> [jа&#769;].</P>
     </Div>
     <P>
       Для обозначения этого звука используется и знак{" "}
@@ -55,8 +55,8 @@ export const foneticheskaya_transkripciya = (
       <Span className="litera">е</Span> и с буквой{" "}
       <Span className="litera">э</Span>.
     </P>
-    <Div className="primer">
-      <Em>Сел</Em> [с&rsquo;э&#769;л], <Em>эти</Em> [э&#769;т&rsquo;и].
+    <Div className="primer"><P>
+      <Em>Сел</Em> [с&rsquo;э&#769;л], <Em>эти</Em> [э&#769;т&rsquo;и].</P>
     </Div>
     <P>
       <Strong>
@@ -65,8 +65,8 @@ export const foneticheskaya_transkripciya = (
       Знак <Span className="litera0">[ &rsquo; ]</Span> &ndash; запятая справа
       сверху у буквы &ndash; указывает на мягкий согласный.
     </P>
-    <Div className="primer">
-      <Em>Мир</Em> [м&rsquo;и&#769;р], <Em>медь</Em> [м&rsquo;э&#769;д&rsquo;].
+    <Div className="primer"><P>
+      <Em>Мир</Em> [м&rsquo;и&#769;р], <Em>медь</Em> [м&rsquo;э&#769;д&rsquo;].</P>
     </Div>
     <P>
       <Strong>
@@ -75,8 +75,8 @@ export const foneticheskaya_transkripciya = (
       Знаки <Span className="litera0">[ &oline; ]</Span> или{" "}
       <Span className="litera0">[:]</Span> обозначают долгий согласный.
     </P>
-    <Div className="primer">
-      <Em>Сжал</Em> [ж:а&#769;л].
+    <Div className="primer"><P>
+      <Em>Сжал</Em> [ж:а&#769;л].</P>
     </Div>
   </View>
 );

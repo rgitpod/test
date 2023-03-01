@@ -10,8 +10,7 @@ import  {Context} from './Context'
 const Separator = () => <View style={styles.separator} />;
 
 export default function Bookmark({ navigation }) {
-  const {setFavs} = useContext(Context)
-  const {favs} = useContext(Context)
+  const {favs ,setFavs} = useContext(Context)
   const keys = Object.keys(favs)
   const { colors } = useTheme();
   const initFavs = useRef()

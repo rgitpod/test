@@ -7,7 +7,7 @@ export default function Paragraph({ navigation, route }) {
   const id = route.params.id;
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <ScrollView contentContainerStyle={{paddingLeft: 12, paddingRight: 12, paddingBottom: 75}}>{index[name][id].text}</ScrollView>
+      <ScrollView contentContainerStyle={{paddingLeft: 14, paddingRight: 14, paddingBottom: 75}}>{index[name][id].text}</ScrollView>
     </SafeAreaView>
   );
 }

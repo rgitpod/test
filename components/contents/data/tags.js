@@ -63,6 +63,7 @@ const Span = ({ children, className }) => {
       style={{
         color: colors.text,
         textShadowColor: colors.litera0,
+        fontSize: settings.fontSizes.litera,
         ...styles[className],
       }}
     >
@@ -75,10 +76,8 @@ const Li = ({ children }) => {
   const { colors } = useTheme();
   const { settings } = useContext(Context);
   return (
-    <View>
-      <Text style={[styles.li, { fontSize: settings.fontSizes.text }]}>
+    <View style={[styles.li, { fontSize: settings.fontSizes.text }]}>
         {children}
-      </Text>
     </View>
   );
 };
@@ -86,16 +85,25 @@ const Li = ({ children }) => {
 const Div = ({ children, className }) => {
   const { colors } = useTheme();
   const { settings } = useContext(Context);
-  return (
+  
+   if (className === "alertText") {
+     return (
     <View>
-      <Text
-        style={[
+      <Text style={[
           styles[className],
           { color: colors.text, fontSize: settings.fontSizes.text },
-        ]}
-      >
+        ]}>
         {children}
-      </Text>
+    </Text>
+    </View>
+  );
+   }  
+  return (
+    <View style={[
+          styles[className],
+          { color: colors.text, fontSize: settings.fontSizes.text },
+        ]}>
+        {children}
     </View>
   );
 };
@@ -117,11 +125,19 @@ const Sup = ({ children }) => {
 };
 
 const T = ({ children }) => {
+  const { settings } = useContext(Context);
+  const { colors } = useTheme();
+
   return (
     <View>
-      <Text style={styles.t}>{children}</Text>
+      <Text style={[styles.t, { fontSize: settings.fontSizes.text }]}>
+        {children}
+      </Text>
     </View>
   );
 };
 
-export { P, Strong, Em, Span, Li, Div, Sup, T };
+const Line = () => <View style={styles.line} />
+
+
+export { P, Strong, Em, Span, Li, Div, Sup, T, Line };

@@ -9,7 +9,7 @@ export const pravopisanie_glasnyh = (
       зависимости от ударения и сочетания с согласными) не влияет на их
       написание.
     </P>
-    <Div className="primer">
+    <Div className="primer"><P>
       Ср.: одинаковое написание безударных и ударных гласных в слове:{" "}
       <Em>
         л<Span className="litera">е</Span>с
@@ -23,6 +23,7 @@ export const pravopisanie_glasnyh = (
         и<Sup>э</Sup>
       </Span>
       су&#769;].
+      </P>
     </Div>
     <P>
       <Strong>
@@ -38,7 +39,7 @@ export const pravopisanie_glasnyh = (
       приставок, оканчивающихся на согласную букву, меняется на{" "}
       <Span className="litera">ы</Span> (в соответствии с произношением).
     </P>
-    <Div className="primer">
+    <Div className="primer"><P>
       Ср.:{" "}
       <Em>
         <Span className="litera">и</Span>гра &ndash; с
@@ -46,40 +47,46 @@ export const pravopisanie_glasnyh = (
         <Span className="litera">ы</Span>граться, под
         <Span className="litera">ы</Span>грать.
       </Em>
+      </P>
     </Div>
     <P>
       <Strong>Исключения:</Strong> гласный <Span className="litera">и</Span> в
       начале корня сохраняется:
     </P>
-    <Li>
-      после приставок <Span className="litera">меж-, сверх-</Span>;
+    <Li><P>
+      после приставок <Span className="litera">меж-, сверх-</Span>;</P>
     </Li>
-    <Div className="primer">
+    <Div className="primer"><P>
       <Em>
         Меж<Span className="litera">и</Span>нститутский, сверх
         <Span className="litera">и</Span>нтересный.
       </Em>
+      </P>
     </Div>
     <Li>
+      <P>
       после иноязычных приставок и частиц (
       <Span className="litera">
         ад-, диз-, ин-, -интер-, кон-, контр-, об-, суб-, супер-, транс-, пан-
       </Span>
       );
+      </P>
     </Li>
-    <Div className="primer">
+    <Div className="primer"><P>
       <Em>
         Суб<Span className="litera">и</Span>нспектор, контр
         <Span className="litera">и</Span>ск, пан
         <Span className="litera">и</Span>ндийский.
       </Em>
+      </P>
     </Div>
-    <Li>в сложносокращённых словах.</Li>
-    <Div className="primer">
+    <Li><P>в сложносокращённых словах.</P></Li>
+    <Div className="primer"><P>
       <Em>
         Пед<Span className="litera">и</Span>нститут, спорт
         <Span className="litera">и</Span>нвентарь.
       </Em>
+      </P>
     </Div>
     <P>
       <Strong>
@@ -90,11 +97,12 @@ export const pravopisanie_glasnyh = (
       <Span className="litera">о</Span>, а в безударном положении (в
       соответствии с произношением) пишется <Span className="litera">а</Span>.
     </P>
-    <Div className="primer">
+    <Div className="primer"><P>
         <Em>
           Р<Span>о&#769;</Span>звальни &ndash; р<Span>а</Span>звали&#769;ться, р
           <Span>о&#769;</Span>ссыпи &ndash; р<Span>а</Span>ссы&#769;паться.
         </Em>
+        </P>
     </Div>
     <P>
       <Strong>Исключение:</Strong>{" "}

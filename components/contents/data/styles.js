@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions } from "react-native";
 
-const wdt = Dimensions.get("window").width;
+const wdt = Dimensions.get("screen").width;
 
 export const styles = StyleSheet.create({
   strong: {
@@ -19,24 +19,22 @@ export const styles = StyleSheet.create({
     marginRight: 5,
   },
   p: {
-    margin: 5,
-    marginTop: 6,
+    marginTop: 12,
     fontFamily: "Rubik-Regular",
     textAlign: "justify",
   },
   li: {
-    paddingLeft: 16,
+    marginTop: -7,
+    paddingLeft: 12,
     fontFamily: "Rubik-Regular",
     textAlign: "justify",
   },
   litera0: {
     color: "black",
-    fontSize: 19,
     textShadowRadius: 1.8,
   },
   litera: {
     color: "black",
-    fontSize: 19,
     textShadowRadius: 1.8,
   },
   alertText: {
@@ -53,20 +51,24 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: "Rubik-Regular",
     padding: 5,
-    margin: 5,
+    margin: 0.1,
   },
   primer: {
-    paddingLeft: 16,
-    marginTop: 2,
+    paddingLeft: 12,
+    marginTop: -7,
     fontSize: 18,
     fontFamily: "Rubik-Regular",
     fontSize: 18,
   },
   t: {
     fontFamily: "Rubik-Regular",
-    fontSize: 18,
     paddingLeft: 8,
     marginBottom: 5,
     width: wdt,
   },
+  line: {
+    marginVertical: 8,
+    borderBottomColor: "#737373",
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  }
 });
