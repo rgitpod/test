@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from "react";
 import Home from "./components/Home";
 import Content from "./components/Content";
+import ContentSub from "./components/ContentSub";
 import Paragraph from "./components/Paragraph";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -42,6 +43,7 @@ export default function App() {
     }
     console.log("Done.");
   };
+  //removeValue()
 
   const initSettings = async () => {
     try {
@@ -96,12 +98,7 @@ export default function App() {
             <Stack.Group
               screenOptions={{
                 header: (props) => {
-                  return (
-                    <AppFooter
-                      {...props}
-                      onPress={changeTheme}
-                    />
-                  );
+                  return <AppFooter {...props} onPress={changeTheme} />;
                 },
               }}
             >

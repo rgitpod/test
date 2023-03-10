@@ -1,92 +1,39 @@
-import {  useContext } from "react";
+import { useContext } from "react";
 import { StyleSheet, Text, ScrollView, View, Pressable } from "react-native";
 import { index } from "./contents/data/index";
+import { subIndex } from "./contents/data/subIndex";
 import { useTheme } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import SvgButton from "./SvgButton";
-import  {Context} from './Context'
+import ContentItem from "./ContentItem";
+import ContentSub from "./ContentSub";
 
 const Separator = () => <View style={styles.separator} />;
 
-export default function Content({ navigation, route }) {
-  const {favs} = useContext(Context);
-  const {setFavs} = useContext(Context)
-  const { colors } = useTheme();
-  const routeName = route.name;  
-
-  const saveFavs = async (n) => {
-    try {
-      const stringifyFavs = JSON.stringify(n);
-      await AsyncStorage.setItem("favs", stringifyFavs);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const addFav = (favIndex) => {
-    const newFavs = {};
-    if (favs[routeName] == undefined) {
-      newFavs[routeName] = [favIndex];
-    } else {
-      newFavs[routeName] = [...favs[routeName], favIndex];
-    }    
-    setFavs({ ...favs, ...newFavs });
-    saveFavs({ ...favs, ...newFavs })
-  };
-
-  const removeFav = (favIndex) => {
-    const newFavs = {...favs};
-    const index = favs[routeName].indexOf(favIndex);
-    newFavs[routeName].splice(index, 1);
-    if (newFavs[routeName].length == 0 ) {
-      delete newFavs[routeName]
-    }
-    setFavs(newFavs);
-    saveFavs(newFavs);
-  };
-
+export default function Content({ navigation, route, subIndex, sub }) {
+  const routeName = route.name;
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView contentContainerStyle={{ paddingBottom: 75 }}>
-        {index[routeName].map((item, i) => (
-          <View style={{ paddingHorizontal: 30 }} key={i}>
-            <View style={styles.btn}>
-              <Pressable
-                onPress={() => {
-                  navigation.navigate("Paragraph", { name: routeName, id: i });
-                }}
-                style={[styles.desc, { flexGrow: 1 }]}
-              >
-                <Text
-                  style={{
-                    color: colors.text,
-                    fontFamily: "Rubik-Regular",
-                  }}
-                >
-                  {item.title}
-                </Text>
-              </Pressable>
-              <Pressable style={[styles.desc, { width: 20 }]}>
-                {favs[routeName]?.includes(i) ? (
-                  <SvgButton
-                    size={26}
-                    name="removeFav"
-                    onPress={() => removeFav(i)}
-                  />
-                ) : (
-                  <SvgButton
-                    size={26}
-                    name="addFav"
-                    onPress={() => addFav(i)}
-                  />
-                )}
-              </Pressable>
-            </View>
-            <Separator />
-          </View>
-        ))}
+        {index[routeName].map((item, i) =>
+          item.sub ? (
+            <ContentSub
+              item={item}
+              i={i}
+              routeName={routeName}
+              navigation={navigation}
+              key={i}
+            />
+          ) : (
+            <ContentItem
+              item={item}
+              i={i}
+              routeName={routeName}
+              navigation={navigation}
+              key={i}
+            />
+          )
+        )}
       </ScrollView>
     </SafeAreaView>
   );

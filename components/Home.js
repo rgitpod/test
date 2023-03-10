@@ -14,7 +14,7 @@ export default function Home({ navigation }) {
       <MenuButton
         title="Морфемика. Словообразование"
         navTo="Morphemics"
-        onPress={() => navigation.navigate(navigation)}
+        navigation={navigation}
       />
       <MenuButton
         title="Лексикология"
@@ -28,7 +28,7 @@ export default function Home({ navigation }) {
       <MenuButton
         title="Морфология"
         navTo="Morphology"
-        onPress={() => navigation.navigate(navigation)}
+        navigation={navigation}
       />
       <MenuButton
         title="Синтаксис"

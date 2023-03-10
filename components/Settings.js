@@ -7,7 +7,6 @@ import { Context } from "./Context";
 
 export default function Settings({
   modalVisible,
-  setModalVisible,
   changeTheme,
 }) {
   const { settings, setSettings } = useContext(Context);

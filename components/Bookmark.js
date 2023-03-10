@@ -51,6 +51,7 @@ export default function Bookmark({ navigation }) {
     setFavs(newFavs)
     saveFavs(newFavs)
   };
+  
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView style={{ marginBottom: 35 }}>

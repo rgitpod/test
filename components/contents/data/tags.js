@@ -7,7 +7,6 @@ import { Context } from "../../Context";
 const P = ({ children }) => {
   const { colors } = useTheme();
   const { settings } = useContext(Context);
-
   return (
     <View>
       <Text
