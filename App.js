@@ -37,7 +37,7 @@ export default function App() {
 
   const removeValue = async () => {
     try {
-      await AsyncStorage.removeItem("settings");
+      await AsyncStorage.removeItem("favs");
     } catch (e) {
       // remove error
     }

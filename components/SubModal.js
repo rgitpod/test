@@ -3,14 +3,17 @@ import { StyleSheet, View, Pressable, Text } from "react-native";
 import SvgButton from "./SvgButton";
 import { useTheme } from "@react-navigation/native";
 import { Context } from "./Context";
-import Content  from "./Content";
+import Content from "./Content";
+import ContentItem from "./ContentItem";
 
 export default function SubModal({
   modalVisible,
   setModalVisible,
   navigation,
-  route,
+  routeName,
   subIndex,
+  subName,
+  i,
   changeTheme,
 }) {
   const { colors } = useTheme();
@@ -18,7 +21,21 @@ export default function SubModal({
     <View
       style={{ display: modalVisible, height: 50, backgroundColor: "green" }}
     >
-      <Content navigation={navigation} route={route} subIndex={subIndex} sub='sub' />
+      <View
+        style={{ display: modalVisible, height: 50, backgroundColor: "blue" }}
+      >
+        {subIndex.map((item, id) => (
+          <ContentItem
+            item={item}
+            i={i}
+            id={id}
+            subName={subName}
+            routeName={routeName}
+            navigation={navigation}
+            key={id}
+          />
+        ))}
+      </View>
       <Pressable onPress={() => setModalVisible("none")}>
         <Text>Close</Text>
       </Pressable>

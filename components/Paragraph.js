@@ -5,6 +5,10 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function Paragraph({  route }) {
   const name = route.params.name;
   const id = route.params.id;
+  const subId = route.params.subId
+  const subName = route.params.subName
+
+  const data = index[name][id]?.[subName]?.[subId] ?? index[name][id]
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -15,7 +19,7 @@ export default function Paragraph({  route }) {
           paddingBottom: 75,
         }}
       >
-        {index[name][id].text}
+        {data.text}
       </ScrollView>
     </SafeAreaView>
   );

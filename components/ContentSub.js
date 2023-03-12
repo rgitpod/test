@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { StyleSheet, Text, ScrollView, View, Pressable } from "react-native";
 import { index } from "./contents/data/index";
-import { subIndex } from "./contents/data/subIndex";
 import { useTheme } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Content from "./Content";
@@ -11,14 +10,11 @@ const Separator = () => <View style={styles.separator} />;
 
 export default function ContentSub({ item, i, routeName, navigation}) {
   const [modalVisible, setModalVisible] = useState("none");
-  const routeName = route.name;
+  const subIndex = item[item.sub]
+
   
-  return (
-    <SafeAreaView>
-      <Content navigation={navigation} route={route} />
-      <View style={{ backgroundColor: "red", height: 150 }}>
-        {subIndex[routeName].map((item, i) => (
-          <View key={i}>
+  return <View style={{ backgroundColor: "red", height: 50 }}>
+          <View>
             <View>
               <Pressable
                 onPress={() => {
@@ -32,14 +28,14 @@ export default function ContentSub({ item, i, routeName, navigation}) {
               modalVisible={modalVisible}
               setModalVisible={setModalVisible}
               navigation={navigation}
-              route={{name: item.rName, routeName: routeName, routeId: i}}
-              subIndex={item.subData}
+              routeName={routeName}
+              subName={item.sub}
+              i={i}
+              subIndex={subIndex}
             />
           </View>
-        ))}
       </View>
-    </SafeAreaView>
-  );
+
 }
 
 const styles = StyleSheet.create({

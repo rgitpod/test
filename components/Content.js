@@ -23,6 +23,7 @@ export default function Content({ navigation, route, subIndex, sub }) {
               routeName={routeName}
               navigation={navigation}
               key={i}
+
             />
           ) : (
             <ContentItem
