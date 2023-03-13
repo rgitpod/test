@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { StyleSheet, View, Pressable, Text } from "react-native";
+import { StyleSheet, View, Pressable, Text, ScrollView } from "react-native";
 import SvgButton from "./SvgButton";
 import { useTheme } from "@react-navigation/native";
 import { Context } from "./Context";
@@ -18,11 +18,11 @@ export default function SubModal({
 }) {
   const { colors } = useTheme();
   return (
-    <View
-      style={{ display: modalVisible, height: 50, backgroundColor: "green" }}
+    <ScrollView
+      style={{ display: modalVisible, flex: 1, backgroundColor: '#e7e8e7'}}
     >
       <View
-        style={{ display: modalVisible, height: 50, backgroundColor: "blue" }}
+        style={{flex: 1 }}
       >
         {subIndex.map((item, id) => (
           <ContentItem
@@ -39,7 +39,7 @@ export default function SubModal({
       <Pressable onPress={() => setModalVisible("none")}>
         <Text>Close</Text>
       </Pressable>
-    </View>
+    </ScrollView>
   );
 }
 

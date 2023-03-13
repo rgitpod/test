@@ -13,8 +13,7 @@ export default function ContentSub({ item, i, routeName, navigation}) {
   const subIndex = item[item.sub]
 
   
-  return <View style={{ backgroundColor: "red", height: 50 }}>
-          <View>
+  return  <View>
             <View>
               <Pressable
                 onPress={() => {
@@ -33,8 +32,9 @@ export default function ContentSub({ item, i, routeName, navigation}) {
               i={i}
               subIndex={subIndex}
             />
+            <Separator />
           </View>
-      </View>
+
 
 }
 

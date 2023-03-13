@@ -18,7 +18,6 @@ export default function ContentItem({
   const { favs, setFavs } = useContext(Context);
   const { colors } = useTheme();
 
-  console.log( i, routeName, id, subName);
   const subMode = typeof subName === "string";
   const inFavs = subMode
     ? favs[routeName]?.sub?.[subName]?.includes(id)

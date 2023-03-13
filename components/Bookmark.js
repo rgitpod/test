@@ -44,10 +44,14 @@ export default function Bookmark({ navigation }) {
           }
           if (routeName.sub) {
             const subKeys = Object.keys(routeName.sub);
-           return subKeys.map((subName) => {
+            return subKeys.map((subName) => {
               return routeName.sub[subName].map((i, key) => {
-                const id = index[sectionName].findIndex((i) => {if (i[subName]) { return i}});
-                const item = index[sectionName][id][subName][i]
+                const id = index[sectionName].findIndex((i) => {
+                  if (i[subName]) {
+                    return i;
+                  }
+                });
+                const item = index[sectionName][id][subName][i];
                 return (
                   <ContentItem
                     item={item}
