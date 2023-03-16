@@ -26,7 +26,7 @@ export default function MenuButton({ navigation, title, navTo }) {
         <Text style={[styles.text, {color: colors.text}]}>{title}</Text>
       </Pressable>
       <Pressable style={[styles.button, styles.quest, {backgroundColor: colors.card}]} onPress={() => setModalVisible(true)}>
-        <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} quest={'quest'}/>
+        <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} />
         <Text style={styles.text}>?</Text>
       </Pressable>
     </Shadow>

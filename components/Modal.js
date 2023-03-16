@@ -9,20 +9,10 @@ import {
   ScrollView,
 } from "react-native";
 import { useSafeAreaFrame } from "react-native-safe-area-context";
-import ContentItem from "./ContentItem";
 
-export default function Modal({
-  modalVisible,
-  setModalVisible,
-  quest,
-  navigation,
-  routeName,
-  subIndex,
-  subName,
-  i,
-}) {
+export default function Modal({ modalVisible, setModalVisible }) {
   const { width, height } = useSafeAreaFrame();
-  console.log(subName);
+
   return (
     <Mod
       animationType="slide"
@@ -46,34 +36,9 @@ export default function Modal({
       </View>
       <View style={styles.centeredView}>
         <View style={[styles.modalView, { height: height - 90 }]}>
-          {quest ? (
-            <View style={styles.modalText}>
-              <Text>Hello World!</Text>
-            </View>
-          ) : (
-            <ScrollView
-              style={{
-                flex: 1,
-                height: 500,
-                backgroundColor: "#e7e8e7",
-              }}
-            >
-              {subIndex.map((item, id) => (
-                <View style={{flex: 1}}>
-                <Text>fg</Text>
-                <ContentItem
-                  item={item}
-                  i={i}
-                  id={id}
-                  subName={subName}
-                  routeName={routeName}
-                  navigation={navigation}
-                  key={id}
-                />
-                </View>
-              ))}
-            </ScrollView>
-          )}
+          <View style={styles.modalText}>
+            <Text>Hello World!</Text>
+          </View>
           <Pressable
             style={[styles.button, styles.buttonClose]}
             onPress={() => setModalVisible(!modalVisible)}
