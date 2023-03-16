@@ -1,8 +1,11 @@
+import { useState} from 'react'
 import { View, StyleSheet, Pressable, Text } from "react-native";
 import { Shadow } from "react-native-shadow-2";
 import { useTheme } from '@react-navigation/native'
+import Modal from './Modal'
 
 export default function MenuButton({ navigation, title, navTo }) {
+  const [modalVisible, setModalVisible] = useState(false);
   const { colors } = useTheme()
   return (
     <Shadow
@@ -22,7 +25,8 @@ export default function MenuButton({ navigation, title, navTo }) {
       >
         <Text style={[styles.text, {color: colors.text}]}>{title}</Text>
       </Pressable>
-      <Pressable style={[styles.button, styles.quest, {backgroundColor: colors.card}]}>
+      <Pressable style={[styles.button, styles.quest, {backgroundColor: colors.card}]} onPress={() => setModalVisible(true)}>
+        <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} quest={'quest'}/>
         <Text style={styles.text}>?</Text>
       </Pressable>
     </Shadow>
@@ -38,6 +42,8 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   title: {
+    borderRightWidth: 0.2,
+    borderRightColor: 'gray',
     borderTopLeftRadius: 6,
     borderBottomLeftRadius: 6,
     flexGrow: 1,
@@ -45,9 +51,7 @@ const styles = StyleSheet.create({
   quest: {
     borderTopRightRadius: 6,
     borderBottomRightRadius: 6,
-    width: 40,
-    borderLeftWidth: 0.2,
-    borderLeftColor: 'gray'
+    width: 50,
   },
   text: {
     fontSize: 18,
