@@ -128,8 +128,7 @@ export const zvuki_rechi_i_bukvy = (
       </Strong>{" "}
       В русском языке обозначаются не все звуки речи, а только основные. В
       русском языке <Strong>42 основных звука</Strong> &ndash;{" "}
-      <Strong>6</Strong> гласных и <Strong>36</Strong>
-      согласных, тогда как <Strong>число букв &ndash; 33</Strong>. Не совпадает
+      <Strong>6</Strong> гласных и <Strong>36</Strong> согласных, тогда как <Strong>число букв &ndash; 33</Strong>. Не совпадает
       также количество основных гласных (10 букв, но 6 звуков) и согласных (21
       буква, но 36 звуков). Разница в количественном составе основных звуков и
       букв определяется особенностями русского письма.
@@ -222,12 +221,13 @@ export const zvuki_rechi_i_bukvy = (
       <P>
         <Strong>1)</Strong> <Span className="litera">Я, е, ё, ю</Span> &ndash;
         это буквы, а не звуки! Поэтому они никогда не используются в
-        транскрипции.{"\n"}
-        {"\n"} <Strong>2)</Strong> Буквы <Span className="litera">а</Span>и{" "}
+        транскрипции.
+        </P>
+        <P><Strong>2)</Strong> Буквы <Span className="litera">а</Span> и{" "}
         <Span className="litera">я</Span>, <Span className="litera">о</Span> и{" "}
-        <Span className="litera">ё</Span>,<Span className="litera">э</Span> и{" "}
+        <Span className="litera">ё</Span>, <Span className="litera">э</Span> и{" "}
         <Span className="litera">е</Span> обозначают соответственно:{" "}
-        <Span className="litera">а</Span>и <Span className="litera">я</Span>{" "}
+        <Span className="litera">а</Span> и <Span className="litera">я</Span>{" "}
         &ndash; звук [а]; <Span className="litera">о</Span> и{" "}
         <Span className="litera">ё</Span>
         &ndash; звук [о], <Span className="litera">э</Span> и{" "}
@@ -253,15 +253,15 @@ export const zvuki_rechi_i_bukvy = (
           <Em>
             С<Span className="litera">я</Span>ду
           </Em>{" "}
-          [<Span className="litera0">с&rsquo;</Span>а&#769;ду],
+          [<Span className="litera0">с&rsquo;</Span>а&#769;ду],{" "}
           <Em>
             с<Span className="litera">е</Span>л
           </Em>{" "}
-          [<Span className="litera0">с&rsquo;</Span>э&#769;л],
+          [<Span className="litera0">с&rsquo;</Span>э&#769;л],{" "}
           <Em>
             с<Span className="litera">ё</Span>л
           </Em>{" "}
-          [<Span className="litera0">с&rsquo;</Span>о&#769;л],
+          [<Span className="litera0">с&rsquo;</Span>о&#769;л],{" "}
           <Em>
             с<Span className="litera">ю</Span>да
           </Em>{" "}
@@ -294,7 +294,7 @@ export const zvuki_rechi_i_bukvy = (
         [жу<Span className="litera0">jо&#769;</Span>т],{" "}
         <Em>
           бре<Span className="litera">ю</Span>т
-        </Em>
+        </Em>{" "}
         [бр&rsquo;э&#769;<Span className="litera0">jу</Span>т];
       </P>
       <P>
@@ -312,7 +312,7 @@ export const zvuki_rechi_i_bukvy = (
         <Strong>3.</Strong> после разделительных <Em>ъ</Em> и <Em>ь</Em>:{" "}
         <Em>
           съ<Span className="litera">е</Span>л
-        </Em>
+        </Em>{" "}
         [с<Span className="litera0">jэ&#769;</Span>л],{" "}
         <Em>
           вь<Span className="litera">ю</Span>н
@@ -340,8 +340,7 @@ export const zvuki_rechi_i_bukvy = (
       </Div>
       <P>
         <Strong>2)</Strong> Буква <Span className="litera">и</Span> после
-        согласных букв <Span className="litera">ж, ш</Span> и
-        <Span className="litera">ц</Span> обозначает звук{" "}
+        согласных букв <Span className="litera">ж, ш</Span> и <Span className="litera">ц</Span> обозначает звук{" "}
         <Span className="litera0">[ы]</Span>.
       </P>
       <Div className="primer">
@@ -354,8 +353,7 @@ export const zvuki_rechi_i_bukvy = (
         <Strong>3)</Strong> Буквы <Span className="litera">а, у</Span> и{" "}
         <Span className="litera">о</Span> в сочетаниях{" "}
         <Span className="litera">ча, ща, чу, щу, чо, що</Span> не
-        свидетельствуют о твёрдости согласных
-        <Span className="litera">ч</Span> и <Span className="litera">щ</Span>.
+        свидетельствуют о твёрдости согласных <Span className="litera">ч</Span> и <Span className="litera">щ</Span>.
         Согласные звуки <Span className="litera0">[ч&rsquo;]</Span> и{" "}
         <Span className="litera0">[щ&rsquo;]</Span> в современном русском
         литературном языке всегда мягкие.
@@ -363,8 +361,7 @@ export const zvuki_rechi_i_bukvy = (
       <Div className="primer">
         <P>
           <Em>Чум</Em> [ч&rsquo;у&#769;м], (пять) <Em>щук</Em>{" "}
-          [щ&rsquo;у&#769;к], <Em>часть</Em>
-          [ч&rsquo;а&#769;с&rsquo;т&rsquo;], <Em>Щорс</Em> [Щ&rsquo;о&#769;рс].
+          [щ&rsquo;у&#769;к], <Em>часть</Em> [ч&rsquo;а&#769;с&rsquo;т&rsquo;], <Em>Щорс</Em> [Щ&rsquo;о&#769;рс].
         </P>
       </Div>
       <P>
@@ -420,8 +417,7 @@ export const zvuki_rechi_i_bukvy = (
         на наличие звука <Span className="litera0">[ j ]</Span> указывают также
         разделительные <Span className="litera">ъ</Span> и{" "}
         <Span className="litera">ь</Span> &ndash; между согласным и гласными
-        буквами
-        <Span className="litera">е, ё, ю, я</Span>.
+        буквами <Span className="litera">е, ё, ю, я</Span>.
       </P>
       <Div className="primer">
         <P>
@@ -442,17 +438,14 @@ export const zvuki_rechi_i_bukvy = (
         <Span className="number">7.</Span>
       </Strong>{" "}
       Буквы <Span className="litera">ъ</Span> и{" "}
-      <Span className="litera">ь</Span>
-      не обозначают никаких звуков.
+      <Span className="litera">ь</Span> не обозначают никаких звуков.
     </P>
 
     <Li>
       <P>
         <Strong>
           Разделительные <Span className="litera">ъ</Span> и{" "}
-          <Span className="litera">ь</Span>
-        </Strong>
-        сигнализируют о том, что следующие за ними{" "}
+          <Span className="litera">ь</Span></Strong> сигнализируют о том, что следующие за ними{" "}
         <Span className="litera">е, ё, ю, я</Span> обозначают два звука, первый
         из которых
         <Span className="litera0">[ j ]</Span>.

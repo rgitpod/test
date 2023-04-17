@@ -79,8 +79,18 @@ export default function ContentItem({
   };
 
   return (
-    <View style={{ paddingHorizontal: 30 }} key={i}>
+    <View style={{ paddingRight: 30 }}>
       <View style={styles.btn}>
+        <View
+          style={{
+            width: 30,
+            alignSelf: "center",
+            paddingLeft: 5,
+            marginTop: 3,
+          }}
+        >
+          <Text style={{color: colors.text}}>{(subMode ? id  : i ) + 1}</Text>
+        </View>
         <Pressable
           onPress={() => {
             navigation.navigate("Paragraph", {
@@ -90,7 +100,7 @@ export default function ContentItem({
               subName: subName,
             });
           }}
-          style={[styles.desc, { flexGrow: 1 }]}
+          style={[styles.title, { flexGrow: 1 }]}
         >
           <Text
             style={{
@@ -101,7 +111,7 @@ export default function ContentItem({
             {item.title}
           </Text>
         </Pressable>
-        <Pressable style={[styles.desc, { width: 20 }]}>
+        <Pressable style={[styles.fav, { width: 20 }]}>
           {inFavs ? (
             <SvgButton size={26} name="removeFav" onPress={() => removeFav()} />
           ) : (
@@ -115,18 +125,24 @@ export default function ContentItem({
 }
 
 const styles = StyleSheet.create({
-  desc: {
-    paddingVertical: 12,
-    paddingHorizontal: 6,
+  title: {
+    marginTop: 9,
+    marginBottom: 5,
+    paddingRight: 15,
     flexShrink: 1,
+    alignSelf: "center",
   },
   separator: {
     marginVertical: 8,
     borderBottomColor: "#737373",
     borderBottomWidth: StyleSheet.hairlineWidth,
+    marginLeft: 30,
   },
   btn: {
     flexDirection: "row",
     alignSelf: "stretch",
+  },
+  fav: {
+    alignSelf: "center",
   },
 });

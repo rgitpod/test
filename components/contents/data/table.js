@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet } from "react-native";
+import { useTheme } from "@react-navigation/native";
 
 const Table = ({ children }) => {
   return <View style={styles.table}>{children}</View>;
@@ -9,9 +10,10 @@ const Row = ({ children }) => {
 };
 
 const Col = ({ children, pr }) => {
+  const { colors } = useTheme()
   return (
-    <View style={[styles.col, styles[pr]]}>
-      <Text style={[styles["text" + pr], styles.text]}>{children}</Text>
+    <View style={[styles.col, styles[pr], {backgroundColor: pr ? colors.tableHead : colors.table}]}>
+      <Text style={[styles["text" + pr], styles.text, {color: colors.text}]}>{children}</Text>
     </View>
   );
 };
@@ -22,7 +24,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     padding: 5,
     flex: 1,
-    backgroundColor: "#d6d6d6",
   },
   text: {
     fontFamily: "Rubik-Regular",
@@ -33,7 +34,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     padding: 5,
     flex: 1,
-    backgroundColor: "#bdbdbd",
   },
   textcolHed: {
     fontSize: 15,

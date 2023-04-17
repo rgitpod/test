@@ -6,36 +6,42 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Content from "./Content";
 import SubModal from "./SubModal";
 
-const Separator = () => <View style={styles.separator} />;
+const Separator = ({ visble }) => (
+  <View
+    style={[styles.separator, { display: visble == "flex" ? "none" : "flex" }]}
+  />
+);
 
-export default function ContentSub({ item, i, routeName, navigation}) {
+export default function ContentSub({ item, i, routeName, navigation }) {
   const [modalVisible, setModalVisible] = useState("none");
-  const subIndex = item[item.sub]
-
+  const subIndex = item[item.sub];
+  const { colors } = useTheme()
   
-  return  <View>
-            <View>
-              <Pressable
-                onPress={() => {
-                  setModalVisible("flex");
-                }}
-              >
-                <Text>{item.title}</Text>
-              </Pressable>
-            </View>
-            <SubModal
-              modalVisible={modalVisible}
-              setModalVisible={setModalVisible}
-              navigation={navigation}
-              routeName={routeName}
-              subName={item.sub}
-              i={i}
-              subIndex={subIndex}
-            />
-            <Separator />
-          </View>
-
-
+  return (
+    <View>
+      <View style={{ paddingHorizontal: 30 }}>
+        <Pressable
+          onPress={() => {
+            setModalVisible("flex" == modalVisible ? "none" : "flex");
+          }}
+          style={{ marginTop: 9, marginBottom: 5 }}
+        >
+          <Text style={{ color: colors.text, fontFamily: "Rubik-Regular" }}>
+            {item.title}
+          </Text>
+        </Pressable>
+        <Separator visble={modalVisible} />
+      </View>
+      <SubModal
+        modalVisible={modalVisible}
+        navigation={navigation}
+        routeName={routeName}
+        subName={item.sub}
+        i={i}
+        subIndex={subIndex}
+      />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({

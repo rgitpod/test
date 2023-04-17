@@ -8,13 +8,11 @@ import ContentItem from "./ContentItem";
 
 export default function SubModal({
   modalVisible,
-  setModalVisible,
   navigation,
   routeName,
   subIndex,
   subName,
   i,
-  changeTheme,
 }) {
   const { colors } = useTheme();
   return (
@@ -36,9 +34,6 @@ export default function SubModal({
           />
         ))}
       </View>
-      <Pressable onPress={() => setModalVisible("none")}>
-        <Text>Close</Text>
-      </Pressable>
     </ScrollView>
   );
 }

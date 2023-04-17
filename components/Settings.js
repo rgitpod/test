@@ -5,10 +5,7 @@ import { useTheme } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Context } from "./Context";
 
-export default function Settings({
-  modalVisible,
-  changeTheme,
-}) {
+export default function Settings({ modalVisible, changeTheme }) {
   const { settings, setSettings } = useContext(Context);
   const { colors } = useTheme();
 
@@ -39,21 +36,32 @@ export default function Settings({
   return (
     <View
       style={{
-        flexDirection: "row",
+        flexDirection: "column",
         justifyContent: "space-around",
+        alignItems: "center",
         position: "absolute",
-        right: 30,
-        bottom: 50,
-        height: 45,
-        width: 150,
+        right: 20,
+        bottom: 60,
+        height: 160,
+        width: 60,
+        borderRadius: 7,
         display: modalVisible,
-        zIndex: 6,
+        zIndex: 2,
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: -2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 5,
         backgroundColor: colors.card,
       }}
     >
-        <SvgButton size={24} name="mod" onPress={changeTheme} />
-        <SvgButton size={24} name="zoomIn" onPress={incrFont} />
-        <SvgButton size={24} name="zoomOut" onPress={decrFont} />
+      <SvgButton size={24} name="mod" onPress={changeTheme} />
+      <SvgButton size={24} name="zoomIn" onPress={incrFont} />
+      <SvgButton size={24} name="zoomOut" onPress={decrFont} />
     </View>
   );
 }

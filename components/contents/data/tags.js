@@ -36,7 +36,7 @@ const Em = ({ children }) => {
 };
 
 const Span = ({ children, className }) => {
-  const { colors } = useTheme();
+  const { colors, dark } = useTheme();
   const { settings } = useContext(Context);
 
   if (className === "number") {
@@ -60,10 +60,12 @@ const Span = ({ children, className }) => {
   return (
     <Text
       style={{
-        color: colors.text,
+        color: colors.litera0,
         textShadowColor: colors.litera0,
         fontSize: settings.fontSizes.litera,
-        ...styles[className],
+        color: colors.litera0,
+        textShadowRadius: dark ? 1.4 : 0,
+        fontFamily: "Rubik-SemiBold",
       }}
     >
       {children}
@@ -76,7 +78,7 @@ const Li = ({ children }) => {
   const { settings } = useContext(Context);
   return (
     <View style={[styles.li, { fontSize: settings.fontSizes.text }]}>
-        {children}
+      {children}
     </View>
   );
 };
@@ -84,25 +86,47 @@ const Li = ({ children }) => {
 const Div = ({ children, className }) => {
   const { colors } = useTheme();
   const { settings } = useContext(Context);
-  
-   if (className === "alertText") {
-     return (
-    <View>
-      <Text style={[
+
+  if (className === "alertText") {
+    return (
+      <View>
+        <Text
+          style={[
+            styles[className],
+            { color: colors.text, fontSize: settings.fontSizes.text },
+          ]}
+        >
+          {children}
+        </Text>
+      </View>
+    );
+  }
+
+  if (className === "alert") {
+    return (
+      <View
+        style={[
           styles[className],
-          { color: colors.text, fontSize: settings.fontSizes.text },
-        ]}>
+          {
+            color: colors.text,
+            fontSize: settings.fontSizes.text,
+            backgroundColor: colors.alertBack,
+            borderColor: colors.alertBorder,
+          },
+        ]}
+      >
         {children}
-    </Text>
-    </View>
-  );
-   }  
+      </View>
+    );
+  }
   return (
-    <View style={[
-          styles[className],
-          { color: colors.text, fontSize: settings.fontSizes.text },
-        ]}>
-        {children}
+    <View
+      style={[
+        styles[className],
+        { color: colors.text, fontSize: settings.fontSizes.text },
+      ]}
+    >
+      {children}
     </View>
   );
 };
@@ -136,7 +160,6 @@ const T = ({ children }) => {
   );
 };
 
-const Line = () => <View style={styles.line} />
-
+const Line = () => <View style={styles.line} />;
 
 export { P, Strong, Em, Span, Li, Div, Sup, T, Line };

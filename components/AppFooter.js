@@ -9,12 +9,11 @@ export default function AppFooter({ navigation, route, onPress }) {
   const { colors } = useTheme();
   const { width, height } = useSafeAreaFrame();
   const [opt, setOpt] = useState("none");
-
   return (
     <View
       style={[
         styles.footer,
-        { backgroundColor: colors.card, top: height - 60 },
+        { backgroundColor: colors.card, top: height - 60, width: width },
       ]}
     >
       <View
@@ -50,25 +49,23 @@ export default function AppFooter({ navigation, route, onPress }) {
           setModalVisible={setOpt}
           changeTheme={onPress}
         />
-         <Pressable
-        onPressIn={() => setOpt("none")}
-        style={{
-          position: "absolute",
-          zIndex: 1,
-        }}
-      >
-        <View
+        <Pressable
+          onPressIn={() => setOpt("none")}
           style={{
             position: "absolute",
-            zIndex: 1,
-            display: opt,
-            width: width,
-            height: height,
-            right: -width/2,
-            bottom: -50,
           }}
-        ></View>
-      </Pressable>
+        >
+          <View
+            style={{
+              position: "absolute",
+              display: opt,
+              width: width,
+              height: height,
+              right: -width / 2,
+              bottom: -50,
+            }}
+          ></View>
+        </Pressable>
       </View>
     </View>
   );
@@ -78,13 +75,21 @@ const styles = StyleSheet.create({
   footer: {
     flexDirection: "row",
     justifyContent: "center",
-    paddingTop: 15,
+    paddingTop: 5,
     paddingBottom: 3,
     borderTopLeftRadius: 14,
     borderTopRightRadius: 14,
     position: "absolute",
-    width: "100%",
     height: 60,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: -2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
   },
   name: {
     fontSize: 16,

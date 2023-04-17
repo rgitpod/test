@@ -17,17 +17,16 @@ export default function MenuButton({ navigation, title, navTo }) {
       }}
       containerStyle={{ margin: 10 }}
       offset={[0, 1]}
-      corners={"topStart"}
     >
       <Pressable
-        style={[styles.button, styles.title, {backgroundColor: colors.card}]}
+        style={({pressed}) => [styles.button, styles.title, {backgroundColor: pressed ? colors.pressed : colors.card}]}
         onPress={() => navigation.navigate(navTo)}
       >
         <Text style={[styles.text, {color: colors.text}]}>{title}</Text>
       </Pressable>
-      <Pressable style={[styles.button, styles.quest, {backgroundColor: colors.card}]} onPress={() => setModalVisible(true)}>
-        <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} />
-        <Text style={styles.text}>?</Text>
+      <Pressable style={({pressed}) => [styles.button, styles.quest, {backgroundColor: pressed ? colors.pressed : colors.card}]} onPress={() => setModalVisible(navTo)}>
+        <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} routName={navTo}/>
+        <Text style={[styles.text, {color: colors.text}]}>?</Text>
       </Pressable>
     </Shadow>
   );

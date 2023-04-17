@@ -45,7 +45,6 @@ export const styles = StyleSheet.create({
     textAlign: "right",
   },
   alert: {
-    backgroundColor: "#d7d7d7",
     borderWidth: 1,
     borderRadius: 5,
     fontSize: 18,
