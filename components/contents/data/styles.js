@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     fontFamily: "Rubik-SemiBold",
   },
   italic: {
-    fontStyle: "italic",
+    fontFamily: "Rubik-Italic",
   },
   number: {
     overflow: "hidden",

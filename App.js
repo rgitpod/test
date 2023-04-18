@@ -25,6 +25,7 @@ export default function App() {
   const [favs, setFavs] = useState({});
   const [fontsLoaded] = useFonts({
     "Rubik-Regular": require("./assets/fonts/Rubik-Regular.ttf"),
+    "Rubik-Italic": require("./assets/fonts/Rubik-Italic.ttf"),
     "Rubik-Bold": require("./assets/fonts/Rubik-Bold.ttf"),
     "Rubik-SemiBold": require("./assets/fonts/Rubik-SemiBold.ttf"),
     "Rubik-Medium": require("./assets/fonts/Rubik-Medium.ttf"),
@@ -89,6 +90,8 @@ export default function App() {
     );
     saveSettings(newSet);
   };
+  
+  const isFavsEmpty = Object.keys(favs).length === 0
 
   return (
     <Context.Provider value={{ favs, setFavs, settings, setSettings }}>
@@ -98,7 +101,7 @@ export default function App() {
             <Stack.Group
               screenOptions={{
                 header: (props) => {
-                  return <AppFooter {...props} onPress={changeTheme} />;
+                  return <AppFooter {...props} onPress={changeTheme} favs={isFavsEmpty}/>;
                 },
               }}
             >
@@ -114,10 +117,10 @@ export default function App() {
               <Stack.Screen name="Culture" component={Content} />
               <Stack.Screen name="Test" component={Test} />
               <Stack.Screen name="Paragraph" component={Paragraph} />
+              <Stack.Screen name="Bookmark" component={Bookmark} />
             </Stack.Group>
             <Stack.Group screenOptions={{ presentation: "modal" }}>
               <Stack.Screen name="Search" component={Search} />
-              <Stack.Screen name="Bookmark" component={Bookmark} />
               <Stack.Screen name="FontSize" component={FontSize} />
             </Stack.Group>
           </Stack.Navigator>

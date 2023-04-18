@@ -17,7 +17,7 @@ export default function SubModal({
   const { colors } = useTheme();
   return (
     <ScrollView
-      style={{ display: modalVisible, flex: 1, backgroundColor: '#e7e8e7'}}
+      style={{ display: modalVisible, flex: 1, backgroundColor: colors.background}}
     >
       <View
         style={{flex: 1 }}

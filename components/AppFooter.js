@@ -5,7 +5,7 @@ import SvgButton from "./SvgButton";
 import { useTheme } from "@react-navigation/native";
 import { useSafeAreaFrame } from "react-native-safe-area-context";
 
-export default function AppFooter({ navigation, route, onPress }) {
+export default function AppFooter({ navigation, route, onPress, favs }) {
   const { colors } = useTheme();
   const { width, height } = useSafeAreaFrame();
   const [opt, setOpt] = useState("none");
@@ -33,6 +33,7 @@ export default function AppFooter({ navigation, route, onPress }) {
           size={26}
           name="bookmark"
           onPress={() => navigation.navigate("Bookmark")}
+          favs={favs}
         />
         <SvgButton
           size={26}

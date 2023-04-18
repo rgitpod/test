@@ -30,8 +30,9 @@ const Strong = ({ children }) => {
 
 const Em = ({ children }) => {
   const { colors } = useTheme();
+  const { settings } = useContext(Context);
   return (
-    <Text style={[styles.italic, { color: colors.text }]}>{children}</Text>
+    <Text style={[styles.italic, { color: colors.text, fontSize: settings.fontSizes.text }]}>{children}</Text>
   );
 };
 
@@ -65,7 +66,7 @@ const Span = ({ children, className }) => {
         fontSize: settings.fontSizes.litera,
         color: colors.litera0,
         textShadowRadius: dark ? 1.4 : 0,
-        fontFamily: "Rubik-SemiBold",
+        fontFamily: className == 'litera' ? "Rubik-SemiBoldItalic" : "Rubik-SemiBold",
       }}
     >
       {children}

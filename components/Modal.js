@@ -28,7 +28,7 @@ export default function Modal({ modalVisible, setModalVisible, routName }) {
       }}
     >
       <View style={styles.centeredView}>
-        <View style={[styles.modalView, { height: height - 90, backgroundColor: colors.card}]}>
+        <View style={[styles.modalView, { height: height - 100, backgroundColor: colors.card}]}>
           <View style={styles.modalText}>{desc[routName]}</View>
           <Pressable
             style={[styles.button, styles.buttonClose]}
@@ -51,7 +51,7 @@ export default function Modal({ modalVisible, setModalVisible, routName }) {
 
 const styles = StyleSheet.create({
   centeredView: {
-    marginTop: 22,
+    marginTop: 12,
   },
   modalView: {
     backgroundColor: "white",

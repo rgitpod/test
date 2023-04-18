@@ -24,9 +24,9 @@ export default function ContentSub({ item, i, routeName, navigation }) {
           onPress={() => {
             setModalVisible("flex" == modalVisible ? "none" : "flex");
           }}
-          style={{ marginTop: 9, marginBottom: 5 }}
+          style={({pressed}) => [{ paddingVertical: 12, borderRadius: 10, backgroundColor: pressed ? colors.pressed : colors.background, }]}
         >
-          <Text style={{ color: colors.text, fontFamily: "Rubik-Regular" }}>
+          <Text style={{ color: colors.text, fontFamily: "Rubik-SemiBold", fontSize: 15,  }}>
             {item.title}
           </Text>
         </Pressable>

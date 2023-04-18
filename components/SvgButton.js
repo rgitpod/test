@@ -3,11 +3,12 @@ import { icon } from "./contents/assets/icon";
 import { useTheme } from "@react-navigation/native";
 import Svg from "react-native-svg";
 
-export default function SvgButton({ name, size, onPress }) {
+export default function SvgButton({ name, size, onPress, back, favs }) {
   const { colors } = useTheme();
   return (
     <Pressable
       onPress={onPress}
+      disabled={favs}
       style={({ pressed }) => [
         {
           width: 45,
@@ -15,12 +16,12 @@ export default function SvgButton({ name, size, onPress }) {
           borderRadius: 15,
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: pressed ? colors.pressed : '',
+          backgroundColor: pressed ? colors.pressed : back ? colors.background : colors.card,
           zIndex: 3,
         },
       ]}
     >
-      <Svg height={size} width={size} viewBox="0 0 16 16" fill={colors.text}>
+      <Svg height={size} width={size} viewBox="0 0 16 16" fill={ favs ? colors.alertBack : colors.text}>
         {icon[name]}
       </Svg>
     </Pressable>

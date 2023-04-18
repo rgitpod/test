@@ -100,7 +100,7 @@ export default function ContentItem({
               subName: subName,
             });
           }}
-          style={[styles.title, { flexGrow: 1 }]}
+          style={({pressed}) => [styles.title, { flexGrow: 1, backgroundColor: pressed ? colors.pressed : colors.background }]}
         >
           <Text
             style={{
@@ -113,9 +113,9 @@ export default function ContentItem({
         </Pressable>
         <Pressable style={[styles.fav, { width: 20 }]}>
           {inFavs ? (
-            <SvgButton size={26} name="removeFav" onPress={() => removeFav()} />
+            <SvgButton size={26} name="removeFav" onPress={() => removeFav()} back={true}/>
           ) : (
-            <SvgButton size={26} name="addFav" onPress={() => addFav()} />
+            <SvgButton size={26} name="addFav" onPress={() => addFav()}  back={true}/>
           )}
         </Pressable>
       </View>
@@ -128,6 +128,8 @@ const styles = StyleSheet.create({
   title: {
     marginTop: 9,
     marginBottom: 5,
+    paddingVertical: 5,
+    borderRadius: 7,
     paddingRight: 15,
     flexShrink: 1,
     alignSelf: "center",
