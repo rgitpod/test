@@ -3,7 +3,6 @@ import { StyleSheet, Text, ScrollView, View, Pressable } from "react-native";
 import { index } from "./contents/data/index";
 import { useTheme } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Content from "./Content";
 import SubModal from "./SubModal";
 
 const Separator = ({ visble }) => (

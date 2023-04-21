@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from "react";
+import { Dimensions } from 'react-native'
 import Home from "./components/Home";
 import Content from "./components/Content";
 import ContentSub from "./components/ContentSub";
@@ -19,6 +20,7 @@ import { Context } from "./components/Context";
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createNativeStackNavigator();
+const fontScale = Dimensions.get('window').fontScale
 
 export default function App() {
   const [settings, setSettings] = useState({ fontSizes: FS, mod: Theme.light });
@@ -38,13 +40,13 @@ export default function App() {
 
   const removeValue = async () => {
     try {
-      await AsyncStorage.removeItem("favs");
+      await AsyncStorage.removeItem("settings");
     } catch (e) {
       // remove error
     }
     console.log("Done.");
   };
-  //removeValue()
+  removeValue()
 
   const initSettings = async () => {
     try {
@@ -131,8 +133,8 @@ export default function App() {
 }
 
 let FS = {
-  number: 20,
-  text: 18,
-  alertText: 15,
-  litera: 18.5,
+  number: 20/fontScale,
+  text: 18/fontScale,
+  alertText: 13/fontScale,
+  litera: 18.5/fontScale,
 };

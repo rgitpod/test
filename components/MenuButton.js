@@ -1,8 +1,10 @@
 import { useState} from 'react'
-import { View, StyleSheet, Pressable, Text } from "react-native";
+import { View, StyleSheet, Pressable, Text, Dimensions } from "react-native";
 import { Shadow } from "react-native-shadow-2";
 import { useTheme } from '@react-navigation/native'
 import Modal from './Modal'
+
+const fontScale = Dimensions.get('window').fontScale
 
 export default function MenuButton({ navigation, title, navTo }) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -53,7 +55,7 @@ const styles = StyleSheet.create({
     width: 50,
   },
   text: {
-    fontSize: 18,
+    fontSize: 18/fontScale,
     lineHeight: 21,
     fontFamily: 'Rubik-SemiBold'
   },

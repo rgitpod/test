@@ -2,8 +2,6 @@ import { useContext } from "react";
 import { StyleSheet, View, Pressable, Text, ScrollView } from "react-native";
 import SvgButton from "./SvgButton";
 import { useTheme } from "@react-navigation/native";
-import { Context } from "./Context";
-import Content from "./Content";
 import ContentItem from "./ContentItem";
 
 export default function SubModal({
